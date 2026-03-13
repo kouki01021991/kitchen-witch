@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>管理画面 | 台所の魔法 Kitchen Witch</title>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <style>
+    /* ===========================================
+       森の魔女テーマ — Decap CMS カスタムCSS
+    =========================================== */
+    @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&display=swap');
+
+    /* フォント統一 */
+    body, #nc-root, [class*="cms-"],
+    button, input, textarea, select {
+      font-family: 'Shippori Mincho', 'Hiragino Mincho ProN', Georgia, serif !important;
+    }
+
+    /* ログイン画面 */
+    [class*="AuthenticationPage"],
+    [class*="LoginPage"] {
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 20%,
+          rgba(45,85,24,.55) 0%, transparent 65%),
+        linear-gradient(175deg, #060d04 0%, #0d1a08 45%, #162b0c 100%) !important;
+      min-height: 100vh;
+    }
+
+    /* アプリヘッダー */
+    [class*="AppHeader"], header[class*="Header"] {
+      background: rgba(6,13,4,.96) !important;
+      backdrop-filter: blur(16px) !important;
+      border-bottom: 1px solid rgba(109,170,64,.18) !important;
+      box-shadow: 0 2px 20px rgba(0,0,0,.28) !important;
+    }
+
+    /* サイドバー */
+    [class*="Sidebar"], aside[class*="sidebar"] {
+      background: linear-gradient(180deg, #080f05 0%, #0e1a08 100%) !important;
+      border-right: 1px solid rgba(109,170,64,.14) !important;
+    }
+    [class*="Sidebar"] a, aside a {
+      color: rgba(212,200,170,.72) !important;
+      border-radius: 10px !important;
+    }
+    [class*="Sidebar"] a:hover,
+    [class*="Sidebar"] [class*="active"] {
+      color: #d4f89c !important;
+      background: rgba(45,85,24,.32) !important;
+    }
+
+    /* メインコンテンツ背景 */
+    main, [class*="MainContainer"] {
+      background: #ece8dc !important;
+    }
+
+    /* カード */
+    [class*="Card"], [class*="ListCard"], [class*="EntryCard"] {
+      background: #faf7f0 !important;
+      border: 1px solid rgba(109,170,64,.16) !important;
+      border-radius: 14px !important;
+      box-shadow: 0 3px 16px rgba(20,40,10,.08) !important;
+      transition: transform .22s ease, box-shadow .22s ease !important;
+    }
+    [class*="Card"]:hover { transform: translateY(-4px) !important; }
+
+    /* 入力フォーム */
+    input[type="text"], input[type="email"],
+    input[type="password"], input[type="url"],
+    input[type="number"], textarea, select {
+      border: 1.5px solid rgba(109,170,64,.30) !important;
+      border-radius: 10px !important;
+      background: #faf7f0 !important;
+      color: #1a2010 !important;
+      font-size: 15px !important;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: rgba(109,170,64,.65) !important;
+      box-shadow: 0 0 0 3px rgba(80,140,40,.12) !important;
+      outline: none !important;
+    }
+
+    /* ラベル */
+    label, [class*="ControlLabel"] {
+      color: #2d5518 !important;
+      font-weight: 600 !important;
+      letter-spacing: .1em !important;
+    }
+
+    /* 公開ボタン */
+    button[class*="success"], button[class*="primary"],
+    [class*="PublishButton"] button {
+      background: linear-gradient(135deg, #3a7018, #2d5518) !important;
+      border: 1px solid rgba(109,170,64,.38) !important;
+      border-radius: 9999px !important;
+      color: #d4f89c !important;
+      letter-spacing: .12em !important;
+      box-shadow: 0 4px 16px rgba(45,100,20,.38) !important;
+    }
+    button[class*="success"]:hover { transform: translateY(-2px) !important; }
+
+    /* 画像アップロード */
+    [class*="FileControl"], [class*="ImageControl"] {
+      border: 2px dashed rgba(109,170,64,.35) !important;
+      border-radius: 14px !important;
+      background: rgba(45,85,24,.05) !important;
+    }
+
+    /* スクロールバー */
+    * { scrollbar-width: thin; scrollbar-color: rgba(109,170,64,.30) transparent; }
+    *::-webkit-scrollbar { width: 5px; }
+    *::-webkit-scrollbar-thumb { background: rgba(109,170,64,.30); border-radius: 4px; }
+
+    /* スマホ */
+    @media (max-width: 768px) {
+      input, textarea, select { font-size: 16px !important; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Decap CMS が自動マウント -->
+</body>
+</html>

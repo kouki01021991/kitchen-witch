@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>コンセプト | 森の魔女の台所 — 食は、体を整える魔法。</title>
+  <meta name="description" content="「フードレメディ」とは何か。台所に宿る自然の知恵と、旬を食べる暮らしのコンセプトをご紹介します。">
+  <meta property="og:title" content="コンセプト | 森の魔女の台所">
+  <meta property="og:description" content="台所は、小さな森です。自然の恵みが体を整える。フードレメディというアプローチ。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header header--page" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__logo">
+      <span class="logo-ja">台所の魔法</span>
+      <span class="logo-en">Kitchen Witch</span>
+    </a>
+    <nav class="site-header__nav" aria-label="メインナビゲーション">
+      <a href="index.html">トップ</a>
+      <a href="concept.html" aria-current="page">コンセプト</a>
+      <a href="story.html">ストーリー</a>
+      <a href="service.html">サービス</a>
+      <a href="retreat.html">リトリート</a>
+      <a href="voice.html">お客様の声</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <a href="contact.html" class="site-header__cta-btn">無料レシピを受け取る</a>
+    <button class="site-header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav>
+    <a href="index.html"   onclick="closeMobileMenu()">トップ</a>
+    <a href="concept.html" aria-current="page" onclick="closeMobileMenu()">コンセプト</a>
+    <a href="story.html"   onclick="closeMobileMenu()">ストーリー</a>
+    <a href="service.html" onclick="closeMobileMenu()">サービス</a>
+    <a href="retreat.html" onclick="closeMobileMenu()">リトリート</a>
+    <a href="voice.html"   onclick="closeMobileMenu()">お客様の声</a>
+    <a href="contact.html" onclick="closeMobileMenu()">お問い合わせ</a>
+  </nav>
+  <a href="contact.html" class="btn btn--glow" onclick="closeMobileMenu()">無料レシピを受け取る</a>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero" aria-labelledby="page-title">
+  <canvas class="page-hero__canvas" id="pageHeroCanvas" aria-hidden="true"></canvas>
+  <div class="page-hero__mist" aria-hidden="true"></div>
+  <div class="page-hero__inner">
+    <p class="page-hero__en">Concept</p>
+    <h1 class="page-hero__title" id="page-title">台所に宿る、自然の知恵</h1>
+    <div class="page-hero__deco" aria-hidden="true"></div>
+    <p class="page-hero__sub">
+      食材が持つ力を日々の暮らしに活かす<br>
+      古くて新しい「フードレメディ」という魔法
+    </p>
+  </div>
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <ol class="breadcrumb__list">
+      <li><a href="index.html">トップ</a></li>
+      <li><span aria-current="page">コンセプト</span></li>
+    </ol>
+  </nav>
+</section>
+
+<!-- ============ SECTION: 台所は小さな森 ============ -->
+<section class="section section--cream section--top" aria-labelledby="concept1-title">
+  <div class="container">
+    <div class="concept-block kw-reveal">
+      <div class="concept-visual">
+        <span class="concept-visual__icon">🌿</span>
+      </div>
+      <div class="concept-text">
+        <h2 id="concept1-title">台所は、小さな森です。</h2>
+        <p>
+          旬の根菜、ハーブ、発酵食品——<br>
+          自然の恵みを手に取るたびに、体は静かに、整っていきます。
+        </p>
+        <p>
+          森の木々が季節とともに息づくように、私たちの体も四季のリズムの中に生きています。春は解毒と芽吹き、夏は冷却と水分、秋は滋養と蓄え、冬は温熱と発酵。
+        </p>
+        <p>
+          その流れに沿って食べることが、昔の人たちが当然のように実践してきた「台所の知恵」でした。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: フードレメディとは ============ -->
+<section class="section section--beige" aria-labelledby="concept2-title">
+  <div class="container">
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Food Remedy</p>
+      <h2 class="section-header__ja" id="concept2-title">フードレメディとは</h2>
+      <p class="section-header__text">
+        食材が本来持つ力を、意識的に暮らしへ取り入れること。<br>
+        それが「フードレメディ」というアプローチです。
+      </p>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="remedy-grid">
+      <div class="remedy-card kw-reveal" style="--kw-i:0">
+        <span class="remedy-card__num">01</span>
+        <h3 class="remedy-card__title">旬の食材を選ぶ</h3>
+        <p class="remedy-card__text">その季節に育った食材には、その時期に体が必要とする栄養と効能が凝縮されています。スーパーで通年手に入る食材よりも、旬のものを意識して選ぶことがすべての始まりです。</p>
+      </div>
+      <div class="remedy-card kw-reveal" style="--kw-i:1">
+        <span class="remedy-card__num">02</span>
+        <h3 class="remedy-card__title">食材の「性質」を知る</h3>
+        <p class="remedy-card__text">根菜は体を温め、葉野菜は熱を冷ます。発酵食品は腸を整え、ハーブは気の巡りを助ける。こうした食材の性質を少し知るだけで、台所での選択が変わります。</p>
+      </div>
+      <div class="remedy-card kw-reveal" style="--kw-i:2">
+        <span class="remedy-card__num">03</span>
+        <h3 class="remedy-card__title">発酵の力を借りる</h3>
+        <p class="remedy-card__text">味噌、塩麹、甘酒、ぬか漬け——日本の台所には発酵食品の文化が根付いています。微生物の働きが食材をより消化しやすく、より栄養豊かに変えてくれます。</p>
+      </div>
+      <div class="remedy-card kw-reveal" style="--kw-i:0">
+        <span class="remedy-card__num">04</span>
+        <h3 class="remedy-card__title">薬草・ハーブを活かす</h3>
+        <p class="remedy-card__text">よもぎ、どくだみ、ミント、カモミール。身近な植物が持つ薬効を、お茶や料理に取り入れることで、体のメンテナンスが日常になります。</p>
+      </div>
+      <div class="remedy-card kw-reveal" style="--kw-i:1">
+        <span class="remedy-card__num">05</span>
+        <h3 class="remedy-card__title">五感で食べる</h3>
+        <p class="remedy-card__text">色、香り、食感、音、味。五感を使って食事をすると、体が必要なものを直感的に感じ取れるようになります。食は情報ではなく、体験です。</p>
+      </div>
+      <div class="remedy-card kw-reveal" style="--kw-i:2">
+        <span class="remedy-card__num">06</span>
+        <h3 class="remedy-card__title">丁寧に、繰り返す</h3>
+        <p class="remedy-card__text">フードレメディに即効性はありません。毎日の食卓に少しずつ自然の知恵を重ねることで、体質が変わり、暮らしの質が上がっていきます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: 四季のリズム ============ -->
+<section class="section section--forest" aria-labelledby="concept3-title">
+  <canvas class="section-canvas" id="ctaCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Four Seasons</p>
+      <h2 class="section-header__ja" id="concept3-title">四季のリズムで食べる</h2>
+      <p class="section-header__text">
+        春夏秋冬——それぞれの季節に体が求めるものがあります。<br>
+        季節の声を聞きながら台所に立つことが、フードレメディの核心です。
+      </p>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="recipe-grid">
+      <article class="recipe-card kw-reveal" style="--kw-i:0">
+        <div class="recipe-card__photo recipe-card__photo--spring">
+          <span class="recipe-card__emoji">🌸</span>
+          <div class="recipe-card__season-badge"><span class="season-en">Spring</span><span class="season-ja">解毒・芽吹き</span></div>
+        </div>
+        <div class="recipe-card__body">
+          <h3 class="recipe-card__title">春の食のテーマ</h3>
+          <p class="recipe-card__text">冬の間に溜まったものを手放し、肝臓と胆嚢を助ける。苦味のある野草、菜の花、ふきのとう。</p>
+          <div class="recipe-card__tags"><span class="tag">野草</span><span class="tag">菜の花</span><span class="tag">苦味</span></div>
+        </div>
+      </article>
+      <article class="recipe-card kw-reveal" style="--kw-i:1">
+        <div class="recipe-card__photo recipe-card__photo--summer">
+          <span class="recipe-card__emoji">☀️</span>
+          <div class="recipe-card__season-badge"><span class="season-en">Summer</span><span class="season-ja">冷却・水分</span></div>
+        </div>
+        <div class="recipe-card__body">
+          <h3 class="recipe-card__title">夏の食のテーマ</h3>
+          <p class="recipe-card__text">体の熱を冷まし、水分と気力を補う。きゅうり、トマト、ハーブ。発汗と冷却のバランスを。</p>
+          <div class="recipe-card__tags"><span class="tag">ハーブ</span><span class="tag">夏野菜</span><span class="tag">冷製</span></div>
+        </div>
+      </article>
+      <article class="recipe-card kw-reveal" style="--kw-i:2">
+        <div class="recipe-card__photo recipe-card__photo--autumn">
+          <span class="recipe-card__emoji">🍁</span>
+          <div class="recipe-card__season-badge"><span class="season-en">Autumn</span><span class="season-ja">滋養・蓄え</span></div>
+        </div>
+        <div class="recipe-card__body">
+          <h3 class="recipe-card__title">秋の食のテーマ</h3>
+          <p class="recipe-card__text">実りの季節に栄養を蓄え、冬への準備をする。根菜、きのこ、栗。肺と大腸を養う。</p>
+          <div class="recipe-card__tags"><span class="tag">根菜</span><span class="tag">きのこ</span><span class="tag">栗</span></div>
+        </div>
+      </article>
+      <article class="recipe-card kw-reveal" style="--kw-i:3">
+        <div class="recipe-card__photo recipe-card__photo--winter">
+          <span class="recipe-card__emoji">❄️</span>
+          <div class="recipe-card__season-badge"><span class="season-en">Winter</span><span class="season-ja">温熱・発酵</span></div>
+        </div>
+        <div class="recipe-card__body">
+          <h3 class="recipe-card__title">冬の食のテーマ</h3>
+          <p class="recipe-card__text">体を深く温め、腎臓と生命力を守る。発酵食品、根菜、黒い食材。滋養強壮と保温を。</p>
+          <div class="recipe-card__tags"><span class="tag">発酵</span><span class="tag">味噌</span><span class="tag">黒ごま</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: わたしたちが大切にしていること ============ -->
+<section class="section section--cream" aria-labelledby="concept4-title">
+  <div class="container">
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Our Values</p>
+      <h2 class="section-header__ja" id="concept4-title">大切にしていること</h2>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="about-cards">
+      <div class="value-card kw-reveal" style="--kw-i:0">
+        <div class="value-card__icon">🌱</div>
+        <h3 class="value-card__title">旬を食べる</h3>
+        <p class="value-card__text">季節の食材が持つ本来の力。旬に食べることがいちばんの健康法です。</p>
+      </div>
+      <div class="value-card kw-reveal" style="--kw-i:1">
+        <div class="value-card__icon">🌿</div>
+        <h3 class="value-card__title">自然と繋がる</h3>
+        <p class="value-card__text">森のリズムに合わせた食と暮らし。体と心が本来の輝きを取り戻します。</p>
+      </div>
+      <div class="value-card kw-reveal" style="--kw-i:2">
+        <div class="value-card__icon">🫙</div>
+        <h3 class="value-card__title">知恵を受け継ぐ</h3>
+        <p class="value-card__text">台所に伝わる発酵・薬草・旬食の知恵を現代の暮らしへ橋渡しします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="section cta-final" aria-labelledby="cta-concept-title">
+  <div class="cta-final__bg" aria-hidden="true"></div>
+  <div class="cta-final__mist" aria-hidden="true"></div>
+  <canvas class="section-canvas" id="finalCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="cta-final__inner">
+      <div class="cta-final__sigil" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="96" stroke="rgba(160,210,90,.20)" stroke-width="1"/>
+          <polygon points="100,10 182,145 18,145" stroke="rgba(160,210,90,.16)" stroke-width=".8" fill="none"/>
+          <polygon points="100,190 18,55 182,55" stroke="rgba(160,210,90,.16)" stroke-width=".8" fill="none"/>
+          <circle cx="100" cy="100" r="5" fill="rgba(180,240,100,.35)"/>
+        </svg>
+      </div>
+      <div class="kw-reveal">
+        <p class="cta-final__eyebrow">まずは無料レシピから</p>
+        <h2 class="cta-final__title" id="cta-concept-title">
+          フードレメディを<br><em>あなたの台所へ</em>
+        </h2>
+        <p class="cta-final__body">
+          7日間の旬レシピで、フードレメディを体験してください。<br>
+          難しいことは何もない、毎日の台所が出発点です。
+        </p>
+        <div style="margin-bottom:1rem;">
+          <a href="contact.html" class="btn btn--glow btn--xl">
+            <span class="btn__icon">🌿</span>無料レシピを受け取る
+          </a>
+        </div>
+        <p class="cta-form__note cta-form__note--light">登録無料・スパムはありません・いつでも解除できます</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="footer-logo-ja">台所の魔法</p>
+        <p class="footer-logo-en">Kitchen Witch</p>
+        <p class="footer-tagline">食は、体を整える魔法。<br>自然とともに生きる暮らしを。</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="フッターナビ">
+        <a href="index.html">トップ</a>
+        <a href="concept.html">コンセプト</a>
+        <a href="story.html">ストーリー</a>
+        <a href="service.html">サービス</a>
+        <a href="retreat.html">リトリート</a>
+        <a href="voice.html">お客様の声</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="site-footer__sns">
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+      <a href="https://note.com/" target="_blank" rel="noopener noreferrer" aria-label="note">note</a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+    </div>
+    <p class="site-footer__copy"><small>© 2025 台所の魔法 Kitchen Witch. All Rights Reserved.</small></p>
+  </div>
+</footer>
+<script src="js/effects.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

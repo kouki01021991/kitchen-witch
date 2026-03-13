@@ -1,0 +1,53 @@
+# ================================================================
+#  netlify.toml — 台所の魔法 Kitchen Witch
+# ================================================================
+
+[build]
+  publish = "."
+  command = ""
+
+[functions]
+  directory = "netlify/functions"
+
+# ── リダイレクト（拡張子なしURL） ──────────────────────────
+[[redirects]]
+  from = "/concept";  to = "/concept.html";  status = 200
+[[redirects]]
+  from = "/service";  to = "/service.html";  status = 200
+[[redirects]]
+  from = "/contact";  to = "/contact.html";  status = 200
+[[redirects]]
+  from = "/story";    to = "/story.html";    status = 200
+[[redirects]]
+  from = "/retreat";  to = "/retreat.html";  status = 200
+[[redirects]]
+  from = "/voice";    to = "/voice.html";    status = 200
+[[redirects]]
+  from = "/admin";    to = "/admin/index.html"; status = 200
+[[redirects]]
+  from = "/recipes/:id";  to = "/recipes/detail.html"; status = 200
+[[redirects]]
+  from = "/recipes/:id/"; to = "/recipes/detail.html"; status = 200
+
+# ── ヘッダー ────────────────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

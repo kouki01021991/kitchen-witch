@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>森の魔女の台所 | Kitchen Witch — 食は、体を整える魔法。</title>
+  <meta name="description" content="自然とともに生きる台所の知恵を届けます。フードレメディ・旬のレシピ・森の暮らし。無料レシピ7日間配信中。">
+  <meta property="og:title" content="森の魔女の台所 | Kitchen Witch">
+  <meta property="og:description" content="食は、体を整える魔法。自然とともに生きる台所の知恵を届けます。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__logo">
+      <span class="logo-ja">台所の魔法</span>
+      <span class="logo-en">Kitchen Witch</span>
+    </a>
+    <nav class="site-header__nav" aria-label="メインナビゲーション">
+      <a href="index.html" aria-current="page">トップ</a>
+      <a href="concept.html">コンセプト</a>
+      <a href="story.html">ストーリー</a>
+      <a href="service.html">サービス</a>
+      <a href="retreat.html">リトリート</a>
+      <a href="voice.html">お客様の声</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <a href="contact.html" class="site-header__cta-btn">無料レシピを受け取る</a>
+    <button class="site-header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav>
+    <a href="index.html"   aria-current="page" onclick="closeMobileMenu()">トップ</a>
+    <a href="concept.html" onclick="closeMobileMenu()">コンセプト</a>
+    <a href="story.html"   onclick="closeMobileMenu()">ストーリー</a>
+    <a href="service.html" onclick="closeMobileMenu()">サービス</a>
+    <a href="retreat.html" onclick="closeMobileMenu()">リトリート</a>
+    <a href="voice.html"   onclick="closeMobileMenu()">お客様の声</a>
+    <a href="contact.html" onclick="closeMobileMenu()">お問い合わせ</a>
+  </nav>
+  <a href="contact.html" class="btn btn--glow" onclick="closeMobileMenu()">無料レシピを受け取る</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero" aria-label="メインビジュアル">
+  <div class="hero__layer hero__layer--forest" aria-hidden="true"></div>
+  <div class="hero__layer hero__layer--radial" aria-hidden="true"></div>
+  <div class="hero__layer hero__layer--figure" aria-hidden="true">
+    <svg class="figure-svg" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <ellipse cx="200" cy="320" rx="110" ry="130" fill="url(#aura)" opacity="0.18"/>
+      <path d="M155 390 Q148 360 155 330 Q162 300 155 270" stroke="rgba(230,250,210,.18)" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M200 385 Q193 355 200 322 Q207 289 200 255" stroke="rgba(230,250,210,.14)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <path d="M245 390 Q252 360 245 328 Q238 296 245 265" stroke="rgba(230,250,210,.16)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+      <rect x="130" y="390" width="140" height="60" rx="14" fill="rgba(40,70,20,.55)" stroke="rgba(140,200,80,.22)" stroke-width="1.5"/>
+      <ellipse cx="200" cy="390" rx="70" ry="14" fill="rgba(60,100,30,.45)" stroke="rgba(140,200,80,.18)" stroke-width="1"/>
+      <rect x="100" y="450" width="200" height="14" rx="6" fill="rgba(60,40,20,.4)"/>
+      <path d="M150 390 Q130 360 120 320 Q115 290 125 260 Q135 230 140 200" stroke="rgba(30,60,15,.70)" stroke-width="28" stroke-linecap="round" fill="none"/>
+      <path d="M250 390 Q268 358 278 318 Q284 288 274 258 Q264 228 260 200" stroke="rgba(30,60,15,.70)" stroke-width="28" stroke-linecap="round" fill="none"/>
+      <path d="M140 200 Q170 168 200 165 Q230 162 260 200" stroke="rgba(30,60,15,.72)" stroke-width="32" stroke-linecap="round" fill="none"/>
+      <ellipse cx="200" cy="148" rx="38" ry="44" fill="rgba(25,50,12,.72)"/>
+      <path d="M165 130 Q162 100 175 82 Q188 64 200 60 Q218 58 228 76 Q238 94 236 118 Q240 95 234 75 Q225 50 200 46 Q175 44 162 70 Q150 96 162 128 Z" fill="rgba(20,40,10,.75)"/>
+      <path d="M178 68 Q185 44 200 38 M200 38 Q215 44 222 68" stroke="rgba(140,200,80,.45)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <circle cx="200" cy="34" r="5" fill="rgba(180,240,100,.35)"/>
+      <path d="M178 68 Q165 55 170 42 Q176 48 178 68Z" fill="rgba(100,160,50,.35)"/>
+      <path d="M222 68 Q235 55 230 42 Q224 48 222 68Z" fill="rgba(100,160,50,.35)"/>
+      <circle cx="200" cy="310" r="4" fill="rgba(220,255,160,.6)"/>
+      <circle cx="200" cy="310" r="10" fill="rgba(180,240,100,.15)"/>
+      <defs>
+        <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="rgba(160,220,80,.5)"/>
+          <stop offset="100%" stop-color="rgba(80,140,30,0)"/>
+        </radialGradient>
+      </defs>
+    </svg>
+  </div>
+  <div class="hero__mist hero__mist--1" aria-hidden="true"></div>
+  <div class="hero__mist hero__mist--2" aria-hidden="true"></div>
+  <div class="hero__mist hero__mist--3" aria-hidden="true"></div>
+  <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero__content">
+    <div class="hero__sigil" aria-hidden="true">
+      <svg viewBox="0 0 160 160" fill="none">
+        <circle cx="80" cy="80" r="76" stroke="rgba(160,210,90,.22)" stroke-width=".8"/>
+        <circle cx="80" cy="80" r="58" stroke="rgba(160,210,90,.14)" stroke-width=".5"/>
+        <circle cx="80" cy="80" r="36" stroke="rgba(160,210,90,.18)" stroke-width=".5"/>
+        <polygon points="80,10 142,110 18,110" stroke="rgba(160,210,90,.18)" stroke-width=".6" fill="none"/>
+        <polygon points="80,150 18,50 142,50" stroke="rgba(160,210,90,.18)" stroke-width=".6" fill="none"/>
+        <circle cx="80" cy="80" r="3.5" fill="rgba(180,240,100,.40)"/>
+      </svg>
+    </div>
+    <p class="hero__eyebrow" data-hero-anim="0">Kitchen Witch</p>
+    <h1 class="hero__title" data-hero-anim="1">森の魔女の台所</h1>
+    <div class="hero__deco-line" data-hero-anim="2" aria-hidden="true"></div>
+    <p class="hero__copy" data-hero-anim="3">
+      食は、体を整える魔法。<br>
+      自然とともに生きる<br>
+      台所の知恵を届けます。
+    </p>
+    <div class="hero__btns" data-hero-anim="4">
+      <a href="contact.html" class="btn btn--glow btn--lg">
+        <span class="btn__icon">🌿</span>無料レシピを受け取る
+      </a>
+      <a href="concept.html" class="btn btn--ghost">コンセプトを見る</a>
+    </div>
+    <p class="hero__note" data-hero-anim="5">登録無料・いつでも解除できます</p>
+  </div>
+  <div class="hero__scroll-cue" aria-hidden="true"><span>scroll</span></div>
+</section>
+
+<!-- ============ ABOUT（概要） ============ -->
+<section class="section section--beige" id="about" aria-labelledby="about-title">
+  <div class="container">
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">What is Kitchen Witch?</p>
+      <h2 class="section-header__ja" id="about-title">台所に宿る、自然の知恵</h2>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="about-layout">
+      <div class="about-text kw-reveal">
+        <p class="about-lead">台所は、小さな森です。</p>
+        <p class="about-body">
+          旬の根菜、ハーブ、発酵食品——<br>
+          自然の恵みを手に取るたびに、体は静かに、整っていきます。
+        </p>
+        <p class="about-body">
+          「フードレメディ」とは、食材が持つ力を日々の暮らしに活かす、<br>
+          古くて新しい台所の魔法。
+        </p>
+        <p class="about-body">
+          難しい知識も、特別な道具も必要ない。<br>
+          ただ、季節の声に耳を澄ませるだけで<br>
+          あなたの台所は魔法の場所になります。
+        </p>
+        <a href="concept.html" class="btn btn--forest" style="margin-top:2rem;">
+          コンセプトをくわしく見る →
+        </a>
+      </div>
+      <div class="about-cards">
+        <div class="value-card kw-reveal" style="--kw-i:0">
+          <div class="value-card__icon">🌱</div>
+          <h3 class="value-card__title">旬を食べる</h3>
+          <p class="value-card__text">季節の食材が持つ本来の力。旬に食べることがいちばんの健康法です。</p>
+        </div>
+        <div class="value-card kw-reveal" style="--kw-i:1">
+          <div class="value-card__icon">🌿</div>
+          <h3 class="value-card__title">自然と繋がる</h3>
+          <p class="value-card__text">森のリズムに合わせた食と暮らし。体と心が本来の輝きを取り戻します。</p>
+        </div>
+        <div class="value-card kw-reveal" style="--kw-i:2">
+          <div class="value-card__icon">🫙</div>
+          <h3 class="value-card__title">知恵を受け継ぐ</h3>
+          <p class="value-card__text">台所に伝わる発酵・薬草・旬食の知恵を現代の暮らしへ橋渡しします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA MID ============ -->
+<section class="section section--forest" id="cta-mid" aria-labelledby="cta-mid-title">
+  <canvas class="section-canvas" id="ctaCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="cta-mid__inner kw-reveal">
+      <p class="cta-mid__label">— 期間限定 無料配信中 —</p>
+      <h2 class="cta-mid__title" id="cta-mid-title">
+        自然の食を暮らしに取り入れる<br><em>無料7日レシピ</em>
+      </h2>
+      <p class="cta-mid__body">森の知恵と台所の魔法を<br>あなたの暮らしへ。</p>
+      <ul class="cta-mid__list">
+        <li><span class="check-icon" aria-hidden="true">✦</span> 季節の野草・根菜・ハーブを使った体を整えるレシピ7日分</li>
+        <li><span class="check-icon" aria-hidden="true">✦</span> フードレメディの基本ガイド付き</li>
+        <li><span class="check-icon" aria-hidden="true">✦</span> 森の暮らしコラム（週1回）</li>
+      </ul>
+      <a href="contact.html" class="btn btn--glow btn--lg">
+        <span class="btn__icon">🌿</span>無料で受け取る
+      </a>
+      <p class="cta-form__note" style="margin-top:1rem;">登録無料・スパムはありません・いつでも解除できます</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEASONAL RECIPE ============ -->
+<section class="section section--cream" id="recipe" aria-labelledby="recipe-title">
+  <div class="container">
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Seasonal Recipe</p>
+      <h2 class="section-header__ja" id="recipe-title">季節の台所の魔法</h2>
+      <p class="section-header__text">
+        旬の食材には、その季節に必要な力が宿っています。<br>
+        四季の恵みをいただくことが、体を整える第一歩。
+      </p>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="recipe-grid">
+      <article class="recipe-card kw-reveal" style="--kw-i:0">
+        <div class="recipe-card__photo recipe-card__photo--spring">
+          <span class="recipe-card__emoji">🌱</span>
+          <div class="recipe-card__season-badge"><span class="season-en">Spring</span><span class="season-ja">野草</span></div>
+        </div>
+        <div class="recipe-card__body">
+          <h3 class="recipe-card__title">春の野草スープ</h3>
+          <p class="recipe-card__text">ふきのとう・菜の花・たけのこ。冬の間に溜まったものを手放し、体を目覚めさせる季節の味。</p>
+          <div class="recipe-card__tags"><span class="tag">菜の花</span><span class="tag">ふきのとう</span><span class="tag">たけのこ</span></div>
+        </div>
+      </article>
+      <article class="recipe-card kw-reveal" style="--kw-i:1">
+        <div class="recipe-card__photo recipe-card__photo--summer">
+          <span class="recipe-card__emoji">🌿</span>
+          <div class="recipe-card__season-badge"><span class="season-en">Summer</span><span class="season-ja">ハーブ</span></div>
+        </div>
+        <div class="recipe-card__body">
+          <h3 class="recipe-card__title">夏のハーブ冷製</h3>
+          <p class="recipe-card__text">バジル・ミント・きゅうり。体の熱を冷まし、水分と気力を補う真夏の台所の知恵。</p>
+          <div class="recipe-card__tags"><span class="tag">バジル</span><span class="tag">ミント</span><span class="tag">きゅうり</span></div>
+        </div>
+      </article>
+      <article class="recipe-card kw-reveal" style="--kw-i:2">
+        <div class="recipe-card__photo recipe-card__photo--autumn">
+          <span class="recipe-card__emoji">🍂</span>
+          <div class="recipe-card__season-badge"><span class="season-en">Autumn</span><span class="season-ja">根菜</span></div>
+        </div>
+        <div class="recipe-card__body">
+          <h3 class="recipe-card__title">秋の根菜ポタージュ</h3>
+          <p class="recipe-card__text">さつまいも・れんこん・ごぼう。実りの季節に栄養を蓄え、冬への準備をする土の味。</p>
+          <div class="recipe-card__tags"><span class="tag">さつまいも</span><span class="tag">れんこん</span><span class="tag">ごぼう</span></div>
+        </div>
+      </article>
+      <article class="recipe-card kw-reveal" style="--kw-i:3">
+        <div class="recipe-card__photo recipe-card__photo--winter">
+          <span class="recipe-card__emoji">🫙</span>
+          <div class="recipe-card__season-badge"><span class="season-en">Winter</span><span class="season-ja">発酵</span></div>
+        </div>
+        <div class="recipe-card__body">
+          <h3 class="recipe-card__title">冬の発酵みそ汁</h3>
+          <p class="recipe-card__text">味噌・塩麹・甘酒。体を深く温め、免疫と生命力を守る発酵食品の冬の台所。</p>
+          <div class="recipe-card__tags"><span class="tag">味噌</span><span class="tag">塩麹</span><span class="tag">甘酒</span></div>
+        </div>
+      </article>
+    </div>
+    <div class="center-btn kw-reveal">
+      <a href="contact.html" class="btn btn--forest">7日分のレシピを無料で受け取る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STORY（ダイジェスト） ============ -->
+<section class="section section--forest" id="story" aria-labelledby="story-index-title">
+  <canvas class="section-canvas" id="storyCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="story-layout">
+      <div class="story-visual kw-reveal">
+        <div class="story-portrait">
+          <div class="story-portrait__img-wrap">
+            <div class="story-portrait__placeholder" aria-hidden="true">
+              <svg viewBox="0 0 280 340" fill="none">
+                <circle cx="140" cy="160" r="130" fill="url(#pBg)" opacity=".25"/>
+                <ellipse cx="140" cy="280" rx="70" ry="55" fill="rgba(20,50,10,.65)"/>
+                <rect x="100" y="195" width="80" height="95" rx="20" fill="rgba(20,50,10,.68)"/>
+                <ellipse cx="140" cy="172" rx="38" ry="44" fill="rgba(22,48,11,.72)"/>
+                <path d="M104 155 Q100 120 110 98 Q125 74 140 70 Q158 68 168 92 Q178 116 174 150" fill="rgba(15,35,8,.78)"/>
+                <path d="M118 78 Q125 58 140 52 Q155 58 162 78" stroke="rgba(140,200,80,.55)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <circle cx="140" cy="46" r="7" fill="rgba(160,220,90,.40)"/>
+                <path d="M118 78 Q105 62 112 48 Q119 56 118 78Z" fill="rgba(90,150,40,.40)"/>
+                <path d="M162 78 Q175 62 168 48 Q161 56 162 78Z" fill="rgba(90,150,40,.40)"/>
+                <path d="M106 240 Q88 215 82 188 Q79 168 90 152" stroke="rgba(20,50,10,.55)" stroke-width="20" stroke-linecap="round" fill="none"/>
+                <path d="M82 188 Q70 178 72 164 Q80 168 82 188Z" fill="rgba(80,140,35,.40)"/>
+                <circle cx="88" cy="142" r="3" fill="rgba(200,255,130,.55)"/>
+                <circle cx="194" cy="118" r="2.5" fill="rgba(200,255,130,.45)"/>
+                <circle cx="160" cy="88" r="2" fill="rgba(200,255,130,.50)"/>
+                <defs>
+                  <radialGradient id="pBg" cx="50%" cy="45%" r="55%">
+                    <stop offset="0%" stop-color="rgba(140,200,70,.6)"/>
+                    <stop offset="100%" stop-color="rgba(40,80,15,0)"/>
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="story-portrait__frame" aria-hidden="true"></div>
+          </div>
+          <div class="story-portrait__caption">
+            <span class="caption-name">台所の魔女</span>
+            <span class="caption-role">Kitchen Witch 主宰</span>
+          </div>
+        </div>
+      </div>
+      <div class="story-text kw-reveal">
+        <div class="section-header" style="text-align:left;margin-bottom:2rem;">
+          <p class="section-header__en">My Story</p>
+          <h2 class="section-header__ja" id="story-index-title">
+            なぜ「森の魔女の台所」を<br>始めたのか
+          </h2>
+          <div class="section-header__line" style="margin-left:0;" aria-hidden="true"></div>
+        </div>
+        <p class="story-para">
+          島根の山奥で育ち、祖母の台所には<br>
+          常に季節の恵みが溢れていました。
+        </p>
+        <p class="story-para">
+          二十代に都市に出て、食が乱れ、体を壊した時——<br>
+          祖母の台所に戻ったことで、<br>
+          体と心が静かに回復していきました。
+        </p>
+        <p class="story-emphasis">
+          それが、森の魔女の台所を<br>始めた理由です。
+        </p>
+        <a href="story.html" class="btn btn--glow" style="margin-top:2.5rem;">
+          <span class="btn__icon">🌿</span>ストーリーをくわしく読む
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VOICE（ダイジェスト） ============ -->
+<section class="section section--beige" id="voice" aria-labelledby="voice-index-title">
+  <div class="container">
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Voice</p>
+      <h2 class="section-header__ja" id="voice-index-title">体験者の声</h2>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="voice-grid">
+      <div class="voice-card kw-reveal" style="--kw-i:0">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">生姜や根菜の使い方が変わってから、体の冷えが気にならなくなりました。難しいことは何もなくて、台所がずっと好きな場所になりました。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🌸</div>
+          <div>
+            <p class="voice-card__name">M.K. さん（40代・主婦）</p>
+            <p class="voice-card__badge">フードレメディ講座 受講生</p>
+          </div>
+        </div>
+      </div>
+      <div class="voice-card kw-reveal" style="--kw-i:1">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">旬のレシピを試すたびに、自分の体と自然が繋がっている感覚があります。無料レシピから始めて、今は毎月の配信が来るのが楽しみです。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🌿</div>
+          <div>
+            <p class="voice-card__name">Y.T. さん（30代・会社員）</p>
+            <p class="voice-card__badge">レシピ配信 会員</p>
+          </div>
+        </div>
+      </div>
+      <div class="voice-card kw-reveal" style="--kw-i:2">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">味噌や発酵食品を自分で作れるようになったとき、台所が「魔法の場所」という言葉の意味がわかりました。子どもも一緒に喜んで食べています。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🍃</div>
+          <div>
+            <p class="voice-card__name">A.S. さん（30代・2児の母）</p>
+            <p class="voice-card__badge">フードレメディ講座 受講生</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center-btn kw-reveal">
+      <a href="voice.html" class="btn btn--forest">お客様の声をもっと見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="section cta-final" id="cta-final" aria-labelledby="cta-final-title">
+  <div class="cta-final__bg" aria-hidden="true"></div>
+  <div class="cta-final__mist" aria-hidden="true"></div>
+  <canvas class="section-canvas" id="finalCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="cta-final__inner">
+      <div class="cta-final__sigil" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="96" stroke="rgba(160,210,90,.20)" stroke-width="1"/>
+          <circle cx="100" cy="100" r="72" stroke="rgba(160,210,90,.12)" stroke-width=".6"/>
+          <polygon points="100,10 182,145 18,145" stroke="rgba(160,210,90,.16)" stroke-width=".8" fill="none"/>
+          <polygon points="100,190 18,55 182,55" stroke="rgba(160,210,90,.16)" stroke-width=".8" fill="none"/>
+          <circle cx="100" cy="100" r="5" fill="rgba(180,240,100,.35)"/>
+        </svg>
+      </div>
+      <div class="kw-reveal">
+        <p class="cta-final__eyebrow">自然とともに生きる台所へ</p>
+        <h2 class="cta-final__title" id="cta-final-title">
+          森の魔女の台所<br><em>無料レシピをお届けします</em>
+        </h2>
+        <p class="cta-final__body">
+          季節の食材・フードレメディ・発酵食——<br>
+          森の知恵と台所の魔法を、あなたの暮らしへ。<br>
+          まずは7日間の無料レシピからどうぞ。
+        </p>
+        <div style="margin-bottom:1rem;">
+          <a href="contact.html" class="btn btn--glow btn--xl">
+            <span class="btn__icon">🌿</span>無料登録する
+          </a>
+        </div>
+        <p class="cta-form__note cta-form__note--light">登録無料・スパムはありません・いつでも解除できます</p>
+        <div class="cta-final__trust">
+          <span><span aria-hidden="true">✦</span> 登録者 1,200名以上</span>
+          <span><span aria-hidden="true">✦</span> 返金不要（無料）</span>
+          <span><span aria-hidden="true">✦</span> いつでも解除OK</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="footer-logo-ja">台所の魔法</p>
+        <p class="footer-logo-en">Kitchen Witch</p>
+        <p class="footer-tagline">食は、体を整える魔法。<br>自然とともに生きる暮らしを。</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="フッターナビ">
+        <a href="index.html">トップ</a>
+        <a href="concept.html">コンセプト</a>
+        <a href="story.html">ストーリー</a>
+        <a href="service.html">サービス</a>
+        <a href="retreat.html">リトリート</a>
+        <a href="voice.html">お客様の声</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="site-footer__sns">
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+      <a href="https://note.com/" target="_blank" rel="noopener noreferrer" aria-label="note">note</a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+    </div>
+    <p class="site-footer__copy"><small>© 2025 台所の魔法 Kitchen Witch. All Rights Reserved.</small></p>
+  </div>
+</footer>
+<script src="js/effects.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>リトリート | 森の魔女の台所 — 島根の森で過ごす体験型プログラム</title>
+  <meta name="description" content="島根の森に囲まれた環境で過ごす、2泊3日のフードレメディ体験リトリート。自然の中で体を整え、本来の自分に戻る時間をご提供します。">
+  <meta property="og:title" content="リトリート | 森の魔女の台所">
+  <meta property="og:description" content="島根の森で過ごす体験型リトリート。旬の食材を摘み、発酵食を仕込み、自然のリズムに体を合わせる2泊3日。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header header--page" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__logo">
+      <span class="logo-ja">台所の魔法</span>
+      <span class="logo-en">Kitchen Witch</span>
+    </a>
+    <nav class="site-header__nav" aria-label="メインナビゲーション">
+      <a href="index.html">トップ</a>
+      <a href="concept.html">コンセプト</a>
+      <a href="story.html">ストーリー</a>
+      <a href="service.html">サービス</a>
+      <a href="retreat.html" aria-current="page">リトリート</a>
+      <a href="voice.html">お客様の声</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <a href="contact.html" class="site-header__cta-btn">無料レシピを受け取る</a>
+    <button class="site-header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav>
+    <a href="index.html"   onclick="closeMobileMenu()">トップ</a>
+    <a href="concept.html" onclick="closeMobileMenu()">コンセプト</a>
+    <a href="story.html"   onclick="closeMobileMenu()">ストーリー</a>
+    <a href="service.html" onclick="closeMobileMenu()">サービス</a>
+    <a href="retreat.html" aria-current="page" onclick="closeMobileMenu()">リトリート</a>
+    <a href="voice.html"   onclick="closeMobileMenu()">お客様の声</a>
+    <a href="contact.html" onclick="closeMobileMenu()">お問い合わせ</a>
+  </nav>
+  <a href="contact.html" class="btn btn--glow" onclick="closeMobileMenu()">無料レシピを受け取る</a>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero" aria-labelledby="page-title">
+  <canvas class="page-hero__canvas" id="pageHeroCanvas" aria-hidden="true"></canvas>
+  <div class="page-hero__mist" aria-hidden="true"></div>
+  <div class="page-hero__inner">
+    <p class="page-hero__en">Forest Retreat</p>
+    <h1 class="page-hero__title" id="page-title">森の中で、体を整える</h1>
+    <div class="page-hero__deco" aria-hidden="true"></div>
+    <p class="page-hero__sub">
+      島根の森に囲まれた環境で過ごす、<br>
+      2泊3日のフードレメディ体験リトリート
+    </p>
+  </div>
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <ol class="breadcrumb__list">
+      <li><a href="index.html">トップ</a></li>
+      <li><span aria-current="page">リトリート</span></li>
+    </ol>
+  </nav>
+</section>
+
+<!-- ============ SECTION: リトリートとは ============ -->
+<section class="section section--cream section--top" aria-labelledby="retreat-intro-title">
+  <div class="container">
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">About Retreat</p>
+      <h2 class="section-header__ja" id="retreat-intro-title">リトリートとは</h2>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="retreat-intro kw-reveal">
+      <p>
+        日常から離れ、自然のリズムの中に身を置く。それがリトリートの本質です。
+      </p>
+      <p>
+        島根の山あいの集落、森の空気、湧き水、土の匂い——その環境の中で野草を摘み、旬の食材を収穫し、発酵食を仕込む。体が自然の一部であることを、頭ではなく体で思い出す2泊3日です。
+      </p>
+      <p>
+        オンラインでは届けられない「体験としての食」を、この場所でしか生まれない時間を、一緒に過ごしましょう。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: リトリートプログラム3種 ============ -->
+<section class="section section--beige" aria-labelledby="programs-title">
+  <div class="container">
+
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Programs</p>
+      <h2 class="section-header__ja" id="programs-title">リトリートプログラム</h2>
+      <p class="section-header__text">
+        季節ごとに内容が変わります。<br>
+        その時期の自然と食を、まるごと体験してください。
+      </p>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="retreat-grid">
+
+      <!-- 春 -->
+      <article class="retreat-card kw-reveal" style="--kw-i:0" aria-labelledby="ret1-title">
+        <div class="retreat-card__visual retreat-card__visual--spring">
+          <span class="retreat-card__emoji">🌸</span>
+          <span class="retreat-card__badge">春開催</span>
+        </div>
+        <div class="retreat-card__body">
+          <p class="retreat-card__season">Spring / 3月〜5月</p>
+          <h3 class="retreat-card__title" id="ret1-title">野草摘みと<br>春の解毒リトリート</h3>
+          <p class="retreat-card__desc">
+            ふきのとう、よもぎ、菜の花——春の山里で野草を摘み、冬の間に溜まったものを解放する春の食養生を体験します。味噌汁・野草スープ・薬草茶の調理実習付き。
+          </p>
+          <div class="retreat-card__meta">
+            <div class="retreat-meta-item">
+              <span class="retreat-meta-label">期間</span>
+              <span class="retreat-meta-value">2泊3日</span>
+            </div>
+            <div class="retreat-meta-item">
+              <span class="retreat-meta-label">定員</span>
+              <span class="retreat-meta-value">6名（少人数）</span>
+            </div>
+            <div class="retreat-meta-item">
+              <span class="retreat-meta-label">場所</span>
+              <span class="retreat-meta-value">島根県 山あいの集落</span>
+            </div>
+            <div class="retreat-meta-item">
+              <span class="retreat-meta-label">参加費</span>
+              <span class="retreat-meta-value">¥88,000（税込）</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 夏・秋 -->
+      <article class="retreat-card kw-reveal" style="--kw-i:1" aria-labelledby="ret2-title">
+        <div class="retreat-card__visual retreat-card__visual--forest">
+          <span class="retreat-card__emoji">🌿</span>
+          <span class="retreat-card__badge">夏・秋開催</span>
+        </div>
+        <div class="retreat-card__body">
+          <p class="retreat-card__season">Summer&Autumn / 7月〜10月</p>
+          <h3 class="retreat-card__title" id="ret2-title">ハーブと薬草の<br>森のリトリート</h3>
+          <p class="retreat-card__desc">
+            夏はハーブを摘んでハーブチンキ・薬草茶を仕込み、秋は根菜・きのこを収穫して発酵食品作りへ。森の恵みを五感で受け取る2泊3日。
+          </p>
+          <div class="retreat-card__meta">
+            <div class="retreat-meta-item">
+              <span class="retreat-meta-label">期間</span>
+              <span class="retreat-meta-value">2泊3日</span>
+            </div>
+            <div class="retreat-meta-item">
+              <span class="retreat-meta-label">定員</span>
+              <span class="retreat-meta-value">6名（少人数）</span>
+            </div>
+            <div class="retreat-meta-item">
+              <span class="retreat-meta-label">場所</span>
+              <span class="retreat-meta-value">島根県 山あいの集落</span>
+            </div>
+            <div class="retreat-meta-item">
+              <span class="retreat-meta-label">参加費</span>
+              <span class="retreat-meta-value">¥88,000（税込）</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 冬 -->
+      <article class="retreat-card kw-reveal" style="--kw-i:2" aria-labelledby="ret3-title">
+        <div class="retreat-card__visual retreat-card__visual--harvest">
+          <span class="retreat-card__emoji">🫙</span>
+          <span class="retreat-card__badge">冬開催</span>
+        </div>
+        <div class="retreat-card__body">
+          <p class="retreat-card__season">Winter / 12月〜2月</p>
+          <h3 class="retreat-card__title" id="ret3-title">味噌仕込みと<br>冬の発酵リトリート</h3>
+          <p class="retreat-card__desc">
+            1年で最も体が冷える季節に、発酵食品の力を全身で体験する冬のリトリート。手前味噌・塩麹・甘酒を仕込み、根菜の薬膳鍋を囲む。火を囲む夜のセッション付き。
+          </p>
+          <div class="retreat-card__meta">
+            <div class="retreat-meta-item">
+              <span class="retreat-meta-label">期間</span>
+              <span class="retreat-meta-value">2泊3日</span>
+            </div>
+            <div class="retreat-meta-item">
+              <span class="retreat-meta-label">定員</span>
+              <span class="retreat-meta-value">6名（少人数）</span>
+            </div>
+            <div class="retreat-meta-item">
+              <span class="retreat-meta-label">場所</span>
+              <span class="retreat-meta-value">島根県 山あいの集落</span>
+            </div>
+            <div class="retreat-meta-item">
+              <span class="retreat-meta-label">参加費</span>
+              <span class="retreat-meta-value">¥88,000（税込）</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="center-btn kw-reveal">
+      <p style="font-size:.85rem;color:var(--text-soft);margin-bottom:1rem;letter-spacing:.06em;">参加費には宿泊・食事・プログラム費が含まれます。交通費は各自ご負担ください。</p>
+      <a href="contact.html" class="btn btn--glow btn--lg">
+        <span class="btn__icon">🌿</span>リトリートに申し込む・問い合わせる
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION: タイムライン（3日間の流れ） ============ -->
+<section class="section section--forest" aria-labelledby="schedule-title">
+  <canvas class="section-canvas" id="ctaCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Schedule</p>
+      <h2 class="section-header__ja" id="schedule-title">3日間の流れ（例）</h2>
+      <p class="section-header__text">
+        プログラムは季節と参加者に合わせて変わります。<br>
+        以下は春リトリートのスケジュール例です。
+      </p>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="story-timeline kw-reveal">
+      <div class="timeline-item">
+        <p class="timeline-item__year">1日目 午後</p>
+        <h3 class="timeline-item__title">到着・ウェルカムティー・自己紹介</h3>
+        <p class="timeline-item__text">島根の集落に到着。薬草茶でお迎え。参加者どうしの自己紹介と、3日間の過ごし方のオリエンテーション。夕食は旬の食材を使った薬膳鍋。</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-item__year">2日目 朝</p>
+        <h3 class="timeline-item__title">野草摘み・朝の森の散歩</h3>
+        <p class="timeline-item__text">夜明けとともに森へ。ふきのとう・よもぎ・菜の花を摘みながら、それぞれの食材の性質と使い方を学ぶ。朝食は摘んだ野草を使った野草スープ。</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-item__year">2日目 午後</p>
+        <h3 class="timeline-item__title">発酵食品の仕込み・台所ワーク</h3>
+        <p class="timeline-item__text">午後は台所に集まり、塩麹・薬草チンキを仕込む。フードレメディの基礎レクチャーと、体質診断ワーク。夜は焚き火を囲むシェアリングセッション。</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-item__year">3日目 朝〜昼</p>
+        <h3 class="timeline-item__title">朝の瞑想・まとめ・お見送り</h3>
+        <p class="timeline-item__text">最終朝は静かな瞑想と朝食。3日間の気づきをシェアするまとめセッション。仕込んだ発酵食品・薬草チンキをお土産にお渡しして解散。</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION: リトリートの哲学 ============ -->
+<section class="section section--forest" aria-labelledby="philosophy-title">
+  <canvas class="section-canvas" id="storyCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="retreat-philosophy kw-reveal">
+      <div class="section-header" style="margin-bottom:var(--sp-lg);">
+        <p class="section-header__en">Our Philosophy</p>
+        <h2 class="section-header__ja" id="philosophy-title">リトリートの哲学</h2>
+        <div class="section-header__line" aria-hidden="true"></div>
+      </div>
+      <p class="retreat-philosophy__quote">
+        体を整えるとは、<br>
+        自然のリズムを思い出すこと。
+      </p>
+      <p class="retreat-philosophy__text">
+        私たちは森の中に来ることで、忘れていた何かを取り戻します。それは知識ではなく、体感です。土を踏み、水に触れ、火を見つめ、季節の食材を手に取る——そういった原始的な体験が、現代人が失った「体とのつながり」を呼び戻してくれます。
+      </p>
+      <p class="retreat-philosophy__text" style="margin-top:1.2rem;">
+        リトリートは「癒し」の場でも「学習」の場でもありません。ただ、自然の中に「在る」こと——それがすべての出発点です。
+      </p>
+      <div style="margin-top:var(--sp-lg);">
+        <a href="contact.html" class="btn btn--glow btn--lg">
+          <span class="btn__icon">🌿</span>参加を申し込む
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: 体験者の声（リトリート） ============ -->
+<section class="section section--beige" aria-labelledby="retreat-voice-title">
+  <div class="container">
+
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Voices</p>
+      <h2 class="section-header__ja" id="retreat-voice-title">リトリート参加者の声</h2>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="voice-grid">
+      <div class="voice-card kw-reveal" style="--kw-i:0">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">野草を摘んで、その場で食べる体験が忘れられません。スーパーで買う食材とは全然違う「命をいただく」感覚がありました。帰ってからも自然に旬のものを選ぶようになりました。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🌸</div>
+          <div>
+            <p class="voice-card__name">K.M. さん（40代・京都）</p>
+            <p class="voice-card__badge">春リトリート 参加</p>
+          </div>
+        </div>
+      </div>
+      <div class="voice-card kw-reveal" style="--kw-i:1">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">焚き火を囲んで話した夜のことが、一番印象に残っています。普段は言葉にできない体の感覚を、みんなで共有できた不思議な時間でした。島根の自然と食が、何かを解放してくれました。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🍃</div>
+          <div>
+            <p class="voice-card__name">N.T. さん（35代・東京）</p>
+            <p class="voice-card__badge">夏リトリート 参加</p>
+          </div>
+        </div>
+      </div>
+      <div class="voice-card kw-reveal" style="--kw-i:2">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">手前味噌を仕込んで持ち帰ったのですが、半年後に開けたとき、あの3日間の記憶が全部よみがえりました。食べ物が「記憶の器」になっているのが、フードレメディの深さだと思います。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🌿</div>
+          <div>
+            <p class="voice-card__name">A.Y. さん（50代・大阪）</p>
+            <p class="voice-card__badge">冬リトリート 参加</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="center-btn kw-reveal">
+      <a href="voice.html" class="btn btn--forest">お客様の声をもっと見る →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="section cta-final" aria-labelledby="cta-retreat-title">
+  <div class="cta-final__bg" aria-hidden="true"></div>
+  <div class="cta-final__mist" aria-hidden="true"></div>
+  <canvas class="section-canvas" id="finalCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="cta-final__inner">
+      <div class="cta-final__sigil" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="96" stroke="rgba(160,210,90,.20)" stroke-width="1"/>
+          <circle cx="100" cy="100" r="72" stroke="rgba(160,210,90,.12)" stroke-width=".6"/>
+          <polygon points="100,10 182,145 18,145" stroke="rgba(160,210,90,.16)" stroke-width=".8" fill="none"/>
+          <polygon points="100,190 18,55 182,55" stroke="rgba(160,210,90,.16)" stroke-width=".8" fill="none"/>
+          <circle cx="100" cy="100" r="5" fill="rgba(180,240,100,.35)"/>
+        </svg>
+      </div>
+      <div class="kw-reveal">
+        <p class="cta-final__eyebrow">島根の森で待っています</p>
+        <h2 class="cta-final__title" id="cta-retreat-title">
+          次回リトリートの<br><em>参加申し込みはこちら</em>
+        </h2>
+        <p class="cta-final__body">
+          定員6名の少人数制です。お早めにお申し込みください。<br>
+          日程・空き状況はお問い合わせにてご確認ください。
+        </p>
+        <div class="btn-group" style="margin-bottom:1rem;">
+          <a href="contact.html" class="btn btn--glow btn--xl">
+            <span class="btn__icon">🌿</span>参加を申し込む
+          </a>
+          <a href="contact.html" class="btn btn--ghost btn--lg">日程を問い合わせる</a>
+        </div>
+        <p class="cta-form__note cta-form__note--light">まずは無料レシピ配信からスタートすることもできます</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="footer-logo-ja">台所の魔法</p>
+        <p class="footer-logo-en">Kitchen Witch</p>
+        <p class="footer-tagline">食は、体を整える魔法。<br>自然とともに生きる暮らしを。</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="フッターナビ">
+        <a href="index.html">トップ</a>
+        <a href="concept.html">コンセプト</a>
+        <a href="story.html">ストーリー</a>
+        <a href="service.html">サービス</a>
+        <a href="retreat.html">リトリート</a>
+        <a href="voice.html">お客様の声</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="site-footer__sns">
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+      <a href="https://note.com/" target="_blank" rel="noopener noreferrer" aria-label="note">note</a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+    </div>
+    <p class="site-footer__copy"><small>© 2025 台所の魔法 Kitchen Witch. All Rights Reserved.</small></p>
+  </div>
+</footer>
+
+<script src="js/effects.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

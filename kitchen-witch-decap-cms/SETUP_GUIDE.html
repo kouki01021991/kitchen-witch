@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decap CMS セットアップ手順 | 台所の魔法</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  background: #f0ede4; color: #1a2010; line-height: 1.8; font-size: 15px;
+}
+a { color: #2d7a40; }
+
+/* ─ ヘッダー ─ */
+.hd {
+  background: linear-gradient(175deg, #060d04 0%, #0d1a08 50%, #162b0c 100%);
+  color: #f6f1e4; padding: 52px 24px 44px; text-align: center;
+}
+.hd h1 { font-size: clamp(1.3rem,4vw,2rem); letter-spacing: .14em; margin-bottom: .5rem; }
+.hd p  { color: rgba(212,248,156,.65); font-size: .85rem; letter-spacing: .1em; }
+
+/* ─ コンテナ ─ */
+.wrap { max-width: 800px; margin: 0 auto; padding: 44px 20px 80px; }
+
+/* ─ ステップカード ─ */
+.step {
+  background: #faf7f0;
+  border-radius: 18px; padding: 26px 26px 26px 78px;
+  margin-bottom: 18px; position: relative;
+  border: 1px solid rgba(109,170,64,.16);
+  box-shadow: 0 3px 16px rgba(20,40,10,.07);
+}
+.step-n {
+  position: absolute; left: 18px; top: 24px;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: linear-gradient(135deg, #2d5518, #1a3a10);
+  color: #d4f89c; font-weight: 700; font-size: .95rem;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 14px rgba(45,85,24,.40);
+}
+.step-tag {
+  display: inline-block;
+  background: rgba(109,170,64,.10); border: 1px solid rgba(109,170,64,.25);
+  border-radius: 9999px; padding: 3px 13px;
+  font-size: .7rem; font-weight: 700; letter-spacing: .14em;
+  color: #2d5518; margin-bottom: 9px;
+}
+.step h2 { font-size: .975rem; color: #2d5518; letter-spacing: .1em; margin-bottom: 10px; }
+.step p, .step li { font-size: .86rem; color: #5a6a40; line-height: 1.95; }
+.step ol, .step ul { padding-left: 1.4em; margin: 6px 0; }
+.step ol li { margin-bottom: 7px; }
+
+code {
+  background: #e4e0d4; border: 1px solid rgba(109,170,64,.22);
+  border-radius: 5px; padding: 1px 7px;
+  font-family: 'Courier New', monospace; font-size: .82rem;
+  color: #1e4010; word-break: break-all;
+}
+pre.blk {
+  background: #18220f; color: #b8f088;
+  border-radius: 10px; padding: 14px 18px;
+  font-family: 'Courier New', monospace; font-size: .8rem;
+  line-height: 1.85; overflow-x: auto; margin: 10px 0;
+  white-space: pre-wrap; word-break: break-all;
+}
+
+.note-warn {
+  background: rgba(200,160,40,.10); border: 1px solid rgba(200,160,40,.32);
+  border-radius: 9px; padding: 10px 14px; margin: 10px 0;
+  font-size: .82rem; color: #7a5a10;
+}
+.note-warn::before { content: '⚠️  '; }
+
+.note-ok {
+  background: rgba(109,170,64,.09); border: 1px solid rgba(109,170,64,.26);
+  border-radius: 9px; padding: 10px 14px; margin: 10px 0;
+  font-size: .82rem; color: #2d5518;
+}
+.note-ok::before { content: '✅  '; }
+
+h3.sub { font-size: .85rem; color: #2d5518; margin: 14px 0 5px; letter-spacing: .08em; }
+
+/* ─ ファイルグリッド ─ */
+.fg {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(210px,1fr));
+  gap: 7px; margin: 10px 0;
+}
+.fi {
+  background: #e4e0d4; border-radius: 7px; padding: 8px 12px;
+  font-family: monospace; font-size: .78rem; color: #1e4010;
+  border: 1px solid rgba(109,170,64,.18);
+}
+.fi small { font-family: sans-serif; color: #7a8a60; font-size: .69rem; display: block; margin-top: 2px; }
+
+/* ─ 完了バナー ─ */
+.done {
+  background: linear-gradient(135deg, #2d5518, #1a3a10);
+  border-radius: 20px; padding: 38px 28px;
+  text-align: center; margin-top: 36px; color: #f6f1e4;
+}
+.done h2 { font-size: 1.25rem; letter-spacing: .14em; margin-bottom: .7rem; }
+.done p  { font-size: .85rem; color: rgba(212,248,156,.78); line-height: 2; }
+.done a  {
+  display: inline-block; margin-top: 14px;
+  background: rgba(212,248,156,.14); border: 1.5px solid rgba(212,248,156,.42);
+  color: #d4f89c; border-radius: 9999px; padding: 9px 26px;
+  font-size: .85rem; letter-spacing: .12em; text-decoration: none;
+}
+
+/* ─ 仕組みダイアグラム ─ */
+.flow {
+  display: flex; align-items: center; flex-wrap: wrap;
+  gap: 6px; margin: 10px 0;
+}
+.flow-box {
+  background: #e4e0d4; border: 1px solid rgba(109,170,64,.22);
+  border-radius: 8px; padding: 7px 14px;
+  font-size: .78rem; color: #1e4010; font-weight: 600;
+  white-space: nowrap;
+}
+.flow-arrow { color: #6daa40; font-size: 1.1rem; font-weight: 700; }
+
+@media (max-width: 600px) {
+  .step { padding: 13px 13px 13px 62px; }
+  .step-n { left: 11px; top: 13px; width: 38px; height: 38px; }
+}
+</style>
+</head>
+<body>
+
+<div class="hd">
+  <h1>🌿 Decap CMS セットアップ手順</h1>
+  <p>台所の魔法 Kitchen Witch — /admin から管理画面にログインするまでの全手順（所要時間: 約10分）</p>
+</div>
+
+<div class="wrap">
+
+  <p style="margin-bottom:28px; color:#5a6a40; font-size:.86rem; line-height:2">
+    この手順を<strong>上から順に</strong>実行するだけで、<code>https://kitchen-witch-magic.netlify.app/admin/</code> から管理画面にログインできるようになります。
+  </p>
+
+  <!-- STEP 1 -->
+  <div class="step">
+    <div class="step-n">1</div>
+    <span class="step-tag">GitHub</span>
+    <h2>ZIPを解凍して、ファイルをGitHubにアップロードする</h2>
+    <ol>
+      <li>ZIPファイルを解凍する（フォルダ名は何でも可）</li>
+      <li>GitHubで <code>kitchen-witch-magic</code> のリポジトリを開く</li>
+      <li>「Add file」→「Upload files」をクリック</li>
+      <li>解凍したフォルダの<strong>中身をすべて</strong>ドラッグ＆ドロップ<br>
+          <span style="color:#7a8a60;font-size:.8rem">※フォルダごとではなく、中のファイル・フォルダをすべて選択してください</span></li>
+      <li>コミットメッセージ欄に「add Decap CMS」などと入力</li>
+      <li>「Commit directly to the <code>main</code> branch」→「Commit changes」をクリック</li>
+    </ol>
+    <div class="note-warn">既存ファイルと同名（index.htmlなど）がある場合は上書きされます。管理画面スクリプト入り版に差し替えてください。</div>
+    <h3 class="sub">アップロードするファイル構成</h3>
+    <div class="fg">
+      <div class="fi">admin/index.html<small>管理画面UI（森の魔女テーマ）</small></div>
+      <div class="fi">admin/config.yml<small>編集フィールドの定義ファイル</small></div>
+      <div class="fi">content/pages/top.json<small>トップページ初期データ</small></div>
+      <div class="fi">content/pages/concept.json<small>コンセプト初期データ</small></div>
+      <div class="fi">content/pages/service.json<small>サービス初期データ</small></div>
+      <div class="fi">content/settings.json<small>サイト共通設定</small></div>
+      <div class="fi">content/recipes/<small>レシピ記事（Markdown）</small></div>
+      <div class="fi">uploads/<small>画像の保存先</small></div>
+      <div class="fi">netlify.toml<small>Netlify設定（更新版）</small></div>
+      <div class="fi">*.html（7ファイル）<small>Identityスクリプト挿入済み</small></div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <div class="step-n">2</div>
+    <span class="step-tag">Netlify</span>
+    <h2>Netlify Identity を有効にする</h2>
+    <ol>
+      <li><a href="https://app.netlify.com" target="_blank">app.netlify.com</a> を開いてサイトを選択</li>
+      <li>上のタブ <strong>「Site configuration」</strong> をクリック</li>
+      <li>左メニュー <strong>「Identity」</strong> をクリック</li>
+      <li><strong>「Enable Identity」</strong> ボタンをクリック</li>
+    </ol>
+    <div class="note-ok">Identity が有効になると設定項目が表示されます。</div>
+    <div class="note-warn">このステップを飛ばすと管理画面にログインできません。必ず先に実行してください。</div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step">
+    <div class="step-n">3</div>
+    <span class="step-tag">Netlify</span>
+    <h2>Git Gateway を有効にする（CMSがGitHubに書き込めるようにする）</h2>
+    <ol>
+      <li>「Site configuration」→「Identity」ページを開く</li>
+      <li>ページ下部の <strong>「Services」</strong> セクションを見つける</li>
+      <li>「Git Gateway」の <strong>「Enable Git Gateway」</strong> をクリック</li>
+    </ol>
+    <div class="note-ok">これで管理画面から「保存」すると自動でGitHubにコミットされます。</div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step">
+    <div class="step-n">4</div>
+    <span class="step-tag">Netlify</span>
+    <h2>ログイン用のアカウントを作る（管理者招待）</h2>
+    <ol>
+      <li>「Site configuration」→「Identity」→ <strong>「Invite users」</strong> をクリック</li>
+      <li>管理者のメールアドレスを入力して「Send」</li>
+      <li>届いた招待メールの <strong>「Accept the invite」</strong> をクリック</li>
+      <li>パスワードを設定して完了</li>
+    </ol>
+    <div class="note-warn">招待メールが届かない場合は迷惑メールフォルダを確認してください。</div>
+    <p style="margin-top:8px"><strong>補足:</strong> Netlify Identityは無料プランで最大5ユーザーまで登録できます。</p>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step">
+    <div class="step-n">5</div>
+    <span class="step-tag">完了確認</span>
+    <h2>管理画面にアクセスしてログインする</h2>
+    <ol>
+      <li>ブラウザで下記URLを開く</li>
+    </ol>
+    <pre class="blk">https://kitchen-witch-magic.netlify.app/admin/</pre>
+    <ol start="2">
+      <li>メールアドレスとパスワードを入力してログイン</li>
+      <li>ダッシュボードが表示されれば設定完了 🎉</li>
+    </ol>
+    <div class="note-ok">スマホ・タブレットからも同じURLでアクセスできます。</div>
+  </div>
+
+  <!-- 仕組みの説明 -->
+  <div class="step">
+    <div class="step-n" style="font-size:.72rem;letter-spacing:-.02em">仕組み</div>
+    <span class="step-tag">保存〜公開の流れ</span>
+    <h2>管理画面で編集してから公開されるまで</h2>
+    <div class="flow">
+      <div class="flow-box">管理画面で編集・保存</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">GitHubに自動コミット</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">Netlifyが自動デプロイ</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-box">1〜2分でサイト反映</div>
+    </div>
+
+    <h3 class="sub">管理画面でできること</h3>
+    <ul style="padding-left:1.4em; margin-top:6px">
+      <li>🏠 <strong>トップページ</strong> — キャッチコピー・お客様の声・季節レシピカードを編集</li>
+      <li>🌿 <strong>コンセプト</strong> — 本文・6原則・四季セクションを編集</li>
+      <li>💼 <strong>サービス</strong> — 料金・特徴リスト・FAQを追加・編集・削除</li>
+      <li>🍲 <strong>レシピ記事</strong> — 新規作成・Markdown本文・画像・季節タグで管理</li>
+      <li>⚙️ <strong>サイト設定</strong> — SNS URL・コピーライト・OGP画像</li>
+    </ul>
+
+    <div class="note-warn" style="margin-top:14px">
+      <strong>現在の構成について:</strong> 管理画面での保存はJSONファイルとしてGitHubに書き込まれます。現在の静的HTMLに自動反映させるには、11tyやAstroなどのSSG（静的サイトジェネレーター）との連携が必要です。まずはレシピ記事の蓄積から始めて、後からビルドシステムを追加する形を推奨します。
+    </div>
+  </div>
+
+  <!-- 完了バナー -->
+  <div class="done">
+    <h2>🌿 セットアップ完了</h2>
+    <p>
+      設定が完了したら下記URLから管理画面にアクセスしてください。<br>
+      わからないことはいつでもClaudeにご相談ください。
+    </p>
+    <a href="https://kitchen-witch-magic.netlify.app/admin/" target="_blank">管理画面を開く →</a>
+  </div>
+
+</div>
+</body>
+</html>

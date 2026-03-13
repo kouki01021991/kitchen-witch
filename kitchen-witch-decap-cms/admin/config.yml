@@ -1,0 +1,252 @@
+# ================================================================
+#  admin/config.yml — Decap CMS 設定
+#  台所の魔法 Kitchen Witch
+#
+#  編集後はNetlifyへ再デプロイしてください
+# ================================================================
+
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create:      "✨ 追加: {{collection}} / {{slug}}"
+    update:      "✏️  更新: {{collection}} / {{slug}}"
+    delete:      "🗑️  削除: {{collection}} / {{slug}}"
+    uploadMedia: "📷 画像追加: {{path}}"
+    deleteMedia: "🗑️  画像削除: {{path}}"
+
+media_folder:  "uploads"
+public_folder: "/uploads"
+locale: ja
+site_url: "https://kitchen-witch-magic.netlify.app"
+show_preview_links: true
+
+# ================================================================
+#  コレクション
+# ================================================================
+collections:
+
+  # ── 1. トップページ ────────────────────────────────────────
+  - name: "top"
+    label: "🏠 トップページ"
+    files:
+      - name: "top"
+        label: "トップページを編集"
+        file: "content/pages/top.json"
+        fields:
+
+          - label: "【ヒーロー】メインキャッチコピー"
+            name: hero_title
+            widget: string
+            default: "森の魔女の台所"
+
+          - label: "【ヒーロー】サブコピー（改行は↵で）"
+            name: hero_sub
+            widget: text
+            default: "食は、体を整える魔法。\n自然とともに生きる\n台所の知恵を届けます。"
+
+          - label: "【ヒーロー】CTAボタンテキスト"
+            name: hero_cta
+            widget: string
+            default: "🌿無料レシピを受け取る"
+
+          - label: "【About】見出し"
+            name: about_title
+            widget: string
+            default: "台所に宿る、自然の知恵"
+
+          - label: "【About】リード文"
+            name: about_lead
+            widget: string
+            default: "台所は、小さな森です。"
+
+          - label: "【About】本文"
+            name: about_body
+            widget: markdown
+            minimal: true
+
+          - label: "【バリューカード】3枚"
+            name: values
+            widget: list
+            min: 3
+            max: 3
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "絵文字", name: icon,  widget: string }
+              - { label: "タイトル", name: title, widget: string }
+              - { label: "説明文",  name: text,  widget: text }
+
+          - label: "【季節レシピ】4枚"
+            name: season_recipes
+            widget: list
+            min: 4
+            max: 4
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "絵文字",     name: emoji,     widget: string }
+              - { label: "季節（英）", name: season_en, widget: string }
+              - { label: "季節テーマ", name: season_ja, widget: string }
+              - { label: "料理名",     name: title,     widget: string }
+              - { label: "説明文",     name: desc,      widget: text }
+              - label: "食材タグ（最大3個）"
+                name: tags
+                widget: list
+                max: 3
+                field: { label: "タグ", name: tag, widget: string }
+
+          - label: "【お客様の声】3件"
+            name: voices
+            widget: list
+            min: 3
+            max: 3
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "お客様コメント", name: text,   widget: text }
+              - { label: "絵文字アバター", name: avatar, widget: string }
+              - { label: "お名前・属性",   name: name,   widget: string }
+              - { label: "受講コース名",   name: badge,  widget: string }
+
+          - label: "【CTA】登録者数テキスト"
+            name: member_count
+            widget: string
+            default: "✦ 登録者 1,200名以上"
+
+  # ── 2. コンセプトページ ────────────────────────────────────
+  - name: "concept"
+    label: "🌿 コンセプト"
+    files:
+      - name: "concept"
+        label: "コンセプトページを編集"
+        file: "content/pages/concept.json"
+        fields:
+
+          - { label: "ページ見出し", name: page_title, widget: string, default: "台所に宿る、自然の知恵" }
+          - { label: "ページサブ",   name: page_sub,   widget: text }
+          - { label: "イントロ本文（Markdown）", name: intro, widget: markdown }
+
+          - label: "フードレメディ 6原則"
+            name: principles
+            widget: list
+            min: 6
+            max: 6
+            summary: "{{fields.num}}. {{fields.title}}"
+            fields:
+              - { label: "番号（例: 01）", name: num,   widget: string }
+              - { label: "タイトル",       name: title, widget: string }
+              - { label: "説明文",         name: body,  widget: text }
+
+          - label: "四季セクション（4枚）"
+            name: seasons
+            widget: list
+            min: 4
+            max: 4
+            summary: "{{fields.season_ja}}"
+            fields:
+              - { label: "絵文字",        name: emoji,     widget: string }
+              - { label: "季節（英）",    name: season_en, widget: string }
+              - { label: "季節テーマ",    name: season_ja, widget: string }
+              - { label: "見出し",        name: title,     widget: string }
+              - { label: "説明文",        name: body,      widget: text }
+              - label: "タグ（最大3個）"
+                name: tags
+                widget: list
+                max: 3
+                field: { label: "タグ", name: tag, widget: string }
+
+  # ── 3. サービスページ ──────────────────────────────────────
+  - name: "services"
+    label: "💼 サービス"
+    files:
+      - name: "service"
+        label: "サービスページを編集"
+        file: "content/pages/service.json"
+        fields:
+
+          - { label: "ページ見出し", name: page_title, widget: string }
+          - { label: "ページサブ",   name: page_sub,   widget: text }
+
+          - label: "サービスカード（追加・削除・並び替え可）"
+            name: cards
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "アイコン絵文字",    name: icon,       widget: string }
+              - { label: "カテゴリ（英語）",  name: category,   widget: string }
+              - { label: "サービス名",        name: title,      widget: string }
+              - { label: "説明文",            name: desc,       widget: text }
+              - { label: "料金（例: ¥18,000）", name: price,   widget: string }
+              - { label: "料金補足（例: 税込）", name: price_note, widget: string, required: false }
+              - label: "特徴リスト"
+                name: features
+                widget: list
+                field: { label: "項目", name: item, widget: string }
+
+          - label: "よくある質問"
+            name: faq
+            widget: list
+            summary: "{{fields.q}}"
+            fields:
+              - { label: "質問", name: q, widget: string }
+              - { label: "回答", name: a, widget: text }
+
+  # ── 4. レシピ記事（新規作成・編集・削除） ─────────────────
+  - name: "recipes"
+    label: "🍲 レシピ記事"
+    label_singular: "レシピ"
+    folder: "content/recipes"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    summary: "{{fields.season}} / {{fields.title}} — {{fields.date}}"
+    sortable_fields: ["date", "title", "season"]
+    view_filters:
+      - { label: "🌸 春", field: season, pattern: "春" }
+      - { label: "☀️ 夏", field: season, pattern: "夏" }
+      - { label: "🍁 秋", field: season, pattern: "秋" }
+      - { label: "❄️ 冬", field: season, pattern: "冬" }
+    fields:
+      - { label: "レシピタイトル",       name: title,       widget: string }
+      - label: "公開日"
+        name: date
+        widget: datetime
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        default: ""
+      - label: "季節"
+        name: season
+        widget: select
+        options:
+          - { label: "🌸 春", value: "春" }
+          - { label: "☀️ 夏", value: "夏" }
+          - { label: "🍁 秋", value: "秋" }
+          - { label: "❄️ 冬", value: "冬" }
+      - { label: "サムネイル画像",       name: thumbnail,   widget: image,   required: false }
+      - { label: "リード文（一覧に表示）",name: description, widget: text }
+      - label: "タグ"
+        name: tags
+        widget: list
+        field: { label: "タグ", name: tag, widget: string }
+      - { label: "調理時間（例: 20分）", name: cook_time,  widget: string,  required: false }
+      - { label: "分量（例: 2人分）",    name: servings,   widget: string,  required: false }
+      - { label: "本文（Markdown）",     name: body,       widget: markdown }
+      - { label: "公開する",             name: published,  widget: boolean, default: true }
+
+  # ── 5. サイト共通設定 ──────────────────────────────────────
+  - name: "settings"
+    label: "⚙️ サイト設定"
+    files:
+      - name: "global"
+        label: "サイト共通設定"
+        file: "content/settings.json"
+        fields:
+          - { label: "サイト名（日本語）", name: site_name_ja, widget: string, default: "台所の魔法" }
+          - { label: "サイト名（英語）",   name: site_name_en, widget: string, default: "Kitchen Witch" }
+          - { label: "キャッチコピー",     name: tagline,      widget: string, default: "食は、体を整える魔法。" }
+          - { label: "Instagram URL",      name: instagram,    widget: string }
+          - { label: "note URL",           name: note_url,     widget: string }
+          - { label: "YouTube URL",        name: youtube,      widget: string }
+          - { label: "コピーライト",       name: copyright,    widget: string, default: "© 2025 台所の魔法 Kitchen Witch. All Rights Reserved." }
+          - label: "OGP画像（SNSシェア用 / 1200×630px推奨）"
+            name: ogp_image
+            widget: image
+            required: false

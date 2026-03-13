@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お客様の声 | 森の魔女の台所 — 体験者のリアルな声</title>
+  <meta name="description" content="フードレメディ講座・リトリート・レシピ配信を体験した方々のリアルな声。冷え・疲れ・肌荒れが改善された、暮らしが変わった、台所が好きになった。">
+  <meta property="og:title" content="お客様の声 | 森の魔女の台所">
+  <meta property="og:description" content="森の魔女の台所を体験した方々のリアルな声。食と自然の知恵が暮らしに根付いた実例をご紹介します。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header header--page" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__logo">
+      <span class="logo-ja">台所の魔法</span>
+      <span class="logo-en">Kitchen Witch</span>
+    </a>
+    <nav class="site-header__nav" aria-label="メインナビゲーション">
+      <a href="index.html">トップ</a>
+      <a href="concept.html">コンセプト</a>
+      <a href="story.html">ストーリー</a>
+      <a href="service.html">サービス</a>
+      <a href="retreat.html">リトリート</a>
+      <a href="voice.html" aria-current="page">お客様の声</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <a href="contact.html" class="site-header__cta-btn">無料レシピを受け取る</a>
+    <button class="site-header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav>
+    <a href="index.html"   onclick="closeMobileMenu()">トップ</a>
+    <a href="concept.html" onclick="closeMobileMenu()">コンセプト</a>
+    <a href="story.html"   onclick="closeMobileMenu()">ストーリー</a>
+    <a href="service.html" onclick="closeMobileMenu()">サービス</a>
+    <a href="retreat.html" onclick="closeMobileMenu()">リトリート</a>
+    <a href="voice.html"   aria-current="page" onclick="closeMobileMenu()">お客様の声</a>
+    <a href="contact.html" onclick="closeMobileMenu()">お問い合わせ</a>
+  </nav>
+  <a href="contact.html" class="btn btn--glow" onclick="closeMobileMenu()">無料レシピを受け取る</a>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero" aria-labelledby="page-title">
+  <canvas class="page-hero__canvas" id="pageHeroCanvas" aria-hidden="true"></canvas>
+  <div class="page-hero__mist" aria-hidden="true"></div>
+  <div class="page-hero__inner">
+    <p class="page-hero__en">Voices</p>
+    <h1 class="page-hero__title" id="page-title">体験者の声</h1>
+    <div class="page-hero__deco" aria-hidden="true"></div>
+    <p class="page-hero__sub">
+      フードレメディ講座・リトリート・レシピ配信を<br>
+      体験した方々のリアルな声をご紹介します。
+    </p>
+  </div>
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <ol class="breadcrumb__list">
+      <li><a href="index.html">トップ</a></li>
+      <li><span aria-current="page">お客様の声</span></li>
+    </ol>
+  </nav>
+</section>
+
+<!-- ============ SECTION: 統計バー ============ -->
+<section class="section section--cream section--top" aria-label="実績数値">
+  <div class="container">
+    <div class="voice-stats kw-reveal">
+      <div>
+        <p class="voice-stat__num">1,200<em>名+</em></p>
+        <p class="voice-stat__label">累計登録者数</p>
+      </div>
+      <div>
+        <p class="voice-stat__num">4.9<em>/5</em></p>
+        <p class="voice-stat__label">講座満足度（平均）</p>
+      </div>
+      <div>
+        <p class="voice-stat__num">96<em>%</em></p>
+        <p class="voice-stat__label">継続受講率</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: レシピ配信の声 ============ -->
+<section class="section section--beige" aria-labelledby="voice-recipe-title">
+  <div class="container">
+
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Free Recipe</p>
+      <h2 class="section-header__ja" id="voice-recipe-title">無料レシピ配信を体験して</h2>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="voice-grid">
+
+      <div class="voice-card kw-reveal" style="--kw-i:0">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">生姜や根菜の使い方が変わってから、体の冷えが気にならなくなりました。難しいことは何もなくて、台所がずっと好きな場所になりました。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🌸</div>
+          <div>
+            <p class="voice-card__name">M.K. さん（40代・主婦）</p>
+            <p class="voice-card__badge">レシピ配信 会員</p>
+          </div>
+        </div>
+        <p class="voice-card__detail">「冷え性が長年の悩みだったのですが、根菜スープを毎朝飲み始めてから、足先の冷えが格段に楽になりました」</p>
+      </div>
+
+      <div class="voice-card kw-reveal" style="--kw-i:1">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">旬のレシピを試すたびに、自分の体と自然が繋がっている感覚があります。無料レシピから始めて、今は毎月の配信が来るのが楽しみです。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🌿</div>
+          <div>
+            <p class="voice-card__name">Y.T. さん（30代・会社員）</p>
+            <p class="voice-card__badge">レシピ配信 会員</p>
+          </div>
+        </div>
+        <p class="voice-card__detail">「仕事が忙しくて料理する気力がなかったのですが、『旬のものを一品だけ』という気軽さで続けられています」</p>
+      </div>
+
+      <div class="voice-card kw-reveal" style="--kw-i:2">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">7日間のレシピが届くたびに、食材の見方が変わっていきました。スーパーで「これは今の季節に合う食材だな」と考えるようになったのが嬉しい変化です。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🍃</div>
+          <div>
+            <p class="voice-card__name">R.I. さん（40代・パート）</p>
+            <p class="voice-card__badge">レシピ配信 会員</p>
+          </div>
+        </div>
+        <p class="voice-card__detail">「無料なのにこんなに丁寧な内容に驚きました。フードレメディの基礎ガイドも分かりやすくて、印刷して冷蔵庫に貼っています」</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: 講座の声 ============ -->
+<section class="section section--cream" aria-labelledby="voice-course-title">
+  <div class="container">
+
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Online Course</p>
+      <h2 class="section-header__ja" id="voice-course-title">フードレメディ講座を受けて</h2>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="voice-grid">
+
+      <div class="voice-card kw-reveal" style="--kw-i:0">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">味噌や発酵食品を自分で作れるようになったとき、台所が「魔法の場所」という言葉の意味がわかりました。子どもも一緒に喜んで食べています。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🌸</div>
+          <div>
+            <p class="voice-card__name">A.S. さん（30代・2児の母）</p>
+            <p class="voice-card__badge">フードレメディ入門講座 受講生</p>
+          </div>
+        </div>
+        <p class="voice-card__detail">「第2回の発酵食品の授業が特に印象的でした。塩麹を仕込んで、それが本当においしくなったときの感動は今でも忘れられません」</p>
+      </div>
+
+      <div class="voice-card kw-reveal" style="--kw-i:1">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">体質別の食事の整え方を学んでから、自分の「冷え×湿気体質」への対処法がわかりました。特定の食材を意識して摂るだけで、体がずいぶん軽くなりました。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🌿</div>
+          <div>
+            <p class="voice-card__name">T.N. さん（50代・自営業）</p>
+            <p class="voice-card__badge">フードレメディ入門講座 受講生</p>
+          </div>
+        </div>
+        <p class="voice-card__detail">「第6回の体質別セッションが受講のきっかけでした。東洋医学の考え方がわかりやすく説明されていて、食の見方が根本から変わりました」</p>
+      </div>
+
+      <div class="voice-card kw-reveal" style="--kw-i:2">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">薬草・ハーブの回が特に好きです。庭に生えているよもぎが「薬草」だと知って、早速お茶にしてみました。身近なところに宝が眠っていたんですね。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🍃</div>
+          <div>
+            <p class="voice-card__name">H.O. さん（60代・主婦）</p>
+            <p class="voice-card__badge">フードレメディ入門講座 受講生</p>
+          </div>
+        </div>
+        <p class="voice-card__detail">「動画とテキストが両方あって、繰り返し見られるのがよかったです。自分のペースで進められたので、仕事しながらでも無理なく修了できました」</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: リトリートの声 ============ -->
+<section class="section section--forest" aria-labelledby="voice-retreat-title">
+  <canvas class="section-canvas" id="ctaCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Forest Retreat</p>
+      <h2 class="section-header__ja" id="voice-retreat-title">リトリートに参加して</h2>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="voice-grid">
+
+      <div class="voice-card kw-reveal" style="--kw-i:0">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">野草を摘んで、その場で食べる体験が忘れられません。スーパーで買う食材とは全然違う「命をいただく」感覚がありました。帰ってからも自然に旬のものを選ぶようになりました。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🌸</div>
+          <div>
+            <p class="voice-card__name">K.M. さん（40代・京都）</p>
+            <p class="voice-card__badge">春リトリート 参加</p>
+          </div>
+        </div>
+        <p class="voice-card__detail">「森の空気を吸いながら摘んだ野草の味は、都市では絶対に再現できない体験です。1年に1度は通いたいと思っています」</p>
+      </div>
+
+      <div class="voice-card kw-reveal" style="--kw-i:1">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">焚き火を囲んで話した夜のことが一番印象に残っています。普段は言葉にできない体の感覚をみんなで共有できた不思議な時間でした。島根の自然が何かを解放してくれました。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🍃</div>
+          <div>
+            <p class="voice-card__name">N.T. さん（35代・東京）</p>
+            <p class="voice-card__badge">夏リトリート 参加</p>
+          </div>
+        </div>
+        <p class="voice-card__detail">「定員6名の少人数で、参加者との距離がとても近かったのも良かったです。今でも参加者どうしで連絡を取り合っています」</p>
+      </div>
+
+      <div class="voice-card kw-reveal" style="--kw-i:2">
+        <div class="voice-card__stars" aria-label="星5つ">★★★★★</div>
+        <p class="voice-card__text">手前味噌を仕込んで持ち帰ったのですが、半年後に開けたとき、あの3日間の記憶が全部よみがえりました。食べ物が「記憶の器」になっているのが、フードレメディの深さだと思います。</p>
+        <div class="voice-card__author">
+          <div class="voice-card__avatar">🌿</div>
+          <div>
+            <p class="voice-card__name">A.Y. さん（50代・大阪）</p>
+            <p class="voice-card__badge">冬リトリート 参加</p>
+          </div>
+        </div>
+        <p class="voice-card__detail">「3日間で体がとにかく軽くなりました。食事の力ってこんなにあるんだと、改めて実感しました。来年も冬リトリートに参加する予定です」</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="section cta-final" aria-labelledby="cta-voice-title">
+  <div class="cta-final__bg" aria-hidden="true"></div>
+  <div class="cta-final__mist" aria-hidden="true"></div>
+  <canvas class="section-canvas" id="finalCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="cta-final__inner">
+      <div class="cta-final__sigil" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="96" stroke="rgba(160,210,90,.20)" stroke-width="1"/>
+          <circle cx="100" cy="100" r="72" stroke="rgba(160,210,90,.12)" stroke-width=".6"/>
+          <polygon points="100,10 182,145 18,145" stroke="rgba(160,210,90,.16)" stroke-width=".8" fill="none"/>
+          <polygon points="100,190 18,55 182,55" stroke="rgba(160,210,90,.16)" stroke-width=".8" fill="none"/>
+          <circle cx="100" cy="100" r="5" fill="rgba(180,240,100,.35)"/>
+        </svg>
+      </div>
+      <div class="kw-reveal">
+        <p class="cta-final__eyebrow">あなたの物語も、ここから始まる</p>
+        <h2 class="cta-final__title" id="cta-voice-title">
+          まずは無料レシピで<br><em>体験してみてください</em>
+        </h2>
+        <p class="cta-final__body">
+          1,200名以上の方がここから始めました。<br>
+          難しいことは何もない、毎日の台所が出発点です。
+        </p>
+        <div class="btn-group" style="margin-bottom:1rem;">
+          <a href="contact.html" class="btn btn--glow btn--xl">
+            <span class="btn__icon">🌿</span>無料レシピを受け取る
+          </a>
+          <a href="service.html" class="btn btn--ghost btn--lg">サービス一覧を見る</a>
+        </div>
+        <p class="cta-form__note cta-form__note--light">登録無料・スパムはありません・いつでも解除できます</p>
+        <div class="cta-final__trust">
+          <span><span aria-hidden="true">✦</span> 登録者 1,200名以上</span>
+          <span><span aria-hidden="true">✦</span> 講座満足度 4.9/5</span>
+          <span><span aria-hidden="true">✦</span> いつでも解除OK</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="footer-logo-ja">台所の魔法</p>
+        <p class="footer-logo-en">Kitchen Witch</p>
+        <p class="footer-tagline">食は、体を整える魔法。<br>自然とともに生きる暮らしを。</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="フッターナビ">
+        <a href="index.html">トップ</a>
+        <a href="concept.html">コンセプト</a>
+        <a href="story.html">ストーリー</a>
+        <a href="service.html">サービス</a>
+        <a href="retreat.html">リトリート</a>
+        <a href="voice.html">お客様の声</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="site-footer__sns">
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+      <a href="https://note.com/" target="_blank" rel="noopener noreferrer" aria-label="note">note</a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+    </div>
+    <p class="site-footer__copy"><small>© 2025 台所の魔法 Kitchen Witch. All Rights Reserved.</small></p>
+  </div>
+</footer>
+
+<script src="js/effects.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

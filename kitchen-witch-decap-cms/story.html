@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ストーリー | 森の魔女の台所 — なぜ始めたのか</title>
+  <meta name="description" content="島根の山奥で育ち、祖母の台所から自然の知恵を受け継いだ。なぜ「森の魔女の台所」を始めたのか、その理由と歩みをお伝えします。">
+  <meta property="og:title" content="ストーリー | 森の魔女の台所">
+  <meta property="og:description" content="祖母の台所から始まった、フードレメディとの出会いと、この活動を始めた理由。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header header--page" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__logo">
+      <span class="logo-ja">台所の魔法</span>
+      <span class="logo-en">Kitchen Witch</span>
+    </a>
+    <nav class="site-header__nav" aria-label="メインナビゲーション">
+      <a href="index.html">トップ</a>
+      <a href="concept.html">コンセプト</a>
+      <a href="story.html" aria-current="page">ストーリー</a>
+      <a href="service.html">サービス</a>
+      <a href="retreat.html">リトリート</a>
+      <a href="voice.html">お客様の声</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <a href="contact.html" class="site-header__cta-btn">無料レシピを受け取る</a>
+    <button class="site-header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav>
+    <a href="index.html"   onclick="closeMobileMenu()">トップ</a>
+    <a href="concept.html" onclick="closeMobileMenu()">コンセプト</a>
+    <a href="story.html"   aria-current="page" onclick="closeMobileMenu()">ストーリー</a>
+    <a href="service.html" onclick="closeMobileMenu()">サービス</a>
+    <a href="retreat.html" onclick="closeMobileMenu()">リトリート</a>
+    <a href="voice.html"   onclick="closeMobileMenu()">お客様の声</a>
+    <a href="contact.html" onclick="closeMobileMenu()">お問い合わせ</a>
+  </nav>
+  <a href="contact.html" class="btn btn--glow" onclick="closeMobileMenu()">無料レシピを受け取る</a>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero" aria-labelledby="page-title">
+  <canvas class="page-hero__canvas" id="pageHeroCanvas" aria-hidden="true"></canvas>
+  <div class="page-hero__mist" aria-hidden="true"></div>
+  <div class="page-hero__inner">
+    <p class="page-hero__en">My Story</p>
+    <h1 class="page-hero__title" id="page-title">なぜ「森の魔女の台所」を<br>始めたのか</h1>
+    <div class="page-hero__deco" aria-hidden="true"></div>
+    <p class="page-hero__sub">
+      島根の山奥の祖母の台所から始まった、<br>
+      自然の知恵との出会い
+    </p>
+  </div>
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <ol class="breadcrumb__list">
+      <li><a href="index.html">トップ</a></li>
+      <li><span aria-current="page">ストーリー</span></li>
+    </ol>
+  </nav>
+</section>
+
+<!-- ============ SECTION: メインストーリー ============ -->
+<section class="section section--forest section--top" aria-labelledby="story-main-title">
+  <canvas class="section-canvas" id="storyCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="story-layout">
+      <div class="story-visual kw-reveal">
+        <div class="story-portrait">
+          <div class="story-portrait__img-wrap">
+            <div class="story-portrait__placeholder" aria-hidden="true">
+              <svg viewBox="0 0 280 340" fill="none">
+                <circle cx="140" cy="160" r="130" fill="url(#pBg)" opacity=".25"/>
+                <ellipse cx="140" cy="280" rx="70" ry="55" fill="rgba(20,50,10,.65)"/>
+                <rect x="100" y="195" width="80" height="95" rx="20" fill="rgba(20,50,10,.68)"/>
+                <ellipse cx="140" cy="172" rx="38" ry="44" fill="rgba(22,48,11,.72)"/>
+                <path d="M104 155 Q100 120 110 98 Q125 74 140 70 Q158 68 168 92 Q178 116 174 150" fill="rgba(15,35,8,.78)"/>
+                <path d="M118 78 Q125 58 140 52 Q155 58 162 78" stroke="rgba(140,200,80,.55)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <circle cx="140" cy="46" r="7" fill="rgba(160,220,90,.40)"/>
+                <path d="M118 78 Q105 62 112 48 Q119 56 118 78Z" fill="rgba(90,150,40,.40)"/>
+                <path d="M162 78 Q175 62 168 48 Q161 56 162 78Z" fill="rgba(90,150,40,.40)"/>
+                <path d="M106 240 Q88 215 82 188 Q79 168 90 152" stroke="rgba(20,50,10,.55)" stroke-width="20" stroke-linecap="round" fill="none"/>
+                <path d="M82 188 Q70 178 72 164 Q80 168 82 188Z" fill="rgba(80,140,35,.40)"/>
+                <circle cx="88" cy="142" r="3" fill="rgba(200,255,130,.55)"/>
+                <circle cx="194" cy="118" r="2.5" fill="rgba(200,255,130,.45)"/>
+                <circle cx="160" cy="88" r="2" fill="rgba(200,255,130,.50)"/>
+                <defs>
+                  <radialGradient id="pBg" cx="50%" cy="45%" r="55%">
+                    <stop offset="0%" stop-color="rgba(140,200,70,.6)"/>
+                    <stop offset="100%" stop-color="rgba(40,80,15,0)"/>
+                  </radialGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="story-portrait__frame" aria-hidden="true"></div>
+          </div>
+          <div class="story-portrait__caption">
+            <span class="caption-name">【お名前】</span>
+            <span class="caption-role">Kitchen Witch 主宰</span>
+          </div>
+        </div>
+      </div>
+      <div class="story-text kw-reveal">
+        <div class="section-header" style="text-align:left;margin-bottom:2rem;">
+          <p class="section-header__en">The Beginning</p>
+          <h2 class="section-header__ja" id="story-main-title">祖母の台所から始まった</h2>
+          <div class="section-header__line" style="margin-left:0;" aria-hidden="true"></div>
+        </div>
+        <p class="story-para">
+          島根の山奥で育ち、祖母の台所には<br>
+          常に季節の恵みが溢れていました。
+        </p>
+        <p class="story-para">
+          春は野草を摘み、夏はハーブで薬草茶を作り、<br>
+          秋は根菜を土間に干し、冬は発酵食で体を整える。<br>
+          それは当たり前の暮らしでした。
+        </p>
+        <p class="story-para">
+          祖母は医者ではありませんでしたが、<br>
+          誰かが体調を崩すと決まって台所に向かいました。<br>
+          生姜と葱の薬草スープ、よもぎを使ったお灸、<br>
+          梅干しとほうじ茶のシンプルな処方。
+        </p>
+        <p class="story-emphasis">
+          「食べ物が一番の薬だ」——<br>
+          祖母がいつも口にしていた言葉です。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: 転機 ============ -->
+<section class="section section--beige" aria-labelledby="story-turn-title">
+  <div class="container">
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Turning Point</p>
+      <h2 class="section-header__ja" id="story-turn-title">転機——都市での体験</h2>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="concept-block concept-block--reverse kw-reveal">
+      <div class="concept-visual" style="background:radial-gradient(ellipse 80% 60% at 50% 40%, rgba(140,100,50,.35) 0%, transparent 65%), linear-gradient(155deg,#1e1005 0%,#2a1808 60%,#180e03 100%);">
+        <span class="concept-visual__icon">🌆</span>
+      </div>
+      <div class="concept-text">
+        <h3>都市の暮らし、体が壊れていく</h3>
+        <p>
+          二十代に都市に出て、コンビニ食、残業続き、自炊ゼロの生活が始まりました。最初は気にならなかったのに、三年が経つ頃、体は静かに悲鳴を上げていました。
+        </p>
+        <p>
+          慢性的な疲労感、肌荒れ、月経不順、冷え。病院に行っても「異常なし」と言われるだけ。
+        </p>
+        <p>
+          そのとき、ふと祖母の台所のことを思い出しました。あの温かさ、あの香り、あの「当たり前の暮らし」が、実はどれほど体を守っていたかを、失ってはじめて知りました。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: 回帰と回復 ============ -->
+<section class="section section--cream" aria-labelledby="story-return-title">
+  <div class="container">
+    <div class="concept-block kw-reveal">
+      <div class="concept-visual">
+        <span class="concept-visual__icon">🌿</span>
+      </div>
+      <div class="concept-text">
+        <h2 id="story-return-title">祖母の台所に戻る</h2>
+        <p>
+          仕事を一度手放し、島根に帰りました。祖母は変わらず台所に立ち、変わらず野草を摘み、変わらず発酵食を仕込んでいました。
+        </p>
+        <p>
+          一週間も経たないうちに、体が軽くなり始めました。ひと月後には冷えが和らぎ、三ヶ月後には肌の状態が変わっていました。
+        </p>
+        <p>
+          特別なことは何もしていません。ただ旬のものを食べ、発酵食を取り入れ、夜に温かいものを飲む——それだけのことで、体は回復していきました。
+        </p>
+        <p>
+          「食べ物が一番の薬だ」。祖母の言葉がはじめて腑に落ちた瞬間でした。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: 活動の歩み ============ -->
+<section class="section section--forest" aria-labelledby="story-timeline-title">
+  <canvas class="section-canvas" id="ctaCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Timeline</p>
+      <h2 class="section-header__ja" id="story-timeline-title">活動の歩み</h2>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="story-timeline kw-reveal">
+      <div class="timeline-item">
+        <p class="timeline-item__year">幼少期〜高校</p>
+        <h3 class="timeline-item__title">島根の山奥で育つ</h3>
+        <p class="timeline-item__text">祖母の台所が日常。野草摘み、薬草茶、発酵食品、旬の食材が当たり前の暮らし。</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-item__year">二十代</p>
+        <h3 class="timeline-item__title">都市に出て、体を壊す</h3>
+        <p class="timeline-item__text">コンビニ食・残業続きの生活。慢性疲労・冷え・肌荒れ。病院では「異常なし」。</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-item__year">二十代後半</p>
+        <h3 class="timeline-item__title">島根に戻り、体が回復</h3>
+        <p class="timeline-item__text">祖母の台所に戻り、旬の食・発酵食を再開。三ヶ月で体質が変わる体験をする。</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-item__year">三十代前半</p>
+        <h3 class="timeline-item__title">フードレメディを体系的に学ぶ</h3>
+        <p class="timeline-item__text">東洋医学・薬草・発酵食・栄養学を独学と師事で学び、現代の暮らしに合わせた体系を構築。</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-item__year">近年</p>
+        <h3 class="timeline-item__title">「森の魔女の台所」スタート</h3>
+        <p class="timeline-item__text">レシピ配信・オンライン講座・リトリートを通じて、全国へフードレメディを届け始める。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="section cta-final" aria-labelledby="cta-story-title">
+  <div class="cta-final__bg" aria-hidden="true"></div>
+  <div class="cta-final__mist" aria-hidden="true"></div>
+  <canvas class="section-canvas" id="finalCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="cta-final__inner">
+      <div class="cta-final__sigil" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="96" stroke="rgba(160,210,90,.20)" stroke-width="1"/>
+          <polygon points="100,10 182,145 18,145" stroke="rgba(160,210,90,.16)" stroke-width=".8" fill="none"/>
+          <polygon points="100,190 18,55 182,55" stroke="rgba(160,210,90,.16)" stroke-width=".8" fill="none"/>
+          <circle cx="100" cy="100" r="5" fill="rgba(180,240,100,.35)"/>
+        </svg>
+      </div>
+      <div class="kw-reveal">
+        <p class="cta-final__eyebrow">あなたの台所も魔法の場所になる</p>
+        <h2 class="cta-final__title" id="cta-story-title">
+          森の知恵を<br><em>あなたの暮らしへ</em>
+        </h2>
+        <p class="cta-final__body">
+          祖母が当たり前にやっていたことを、現代の暮らしに合わせて届けます。<br>
+          まずは無料レシピ7日間からはじめましょう。
+        </p>
+        <div style="margin-bottom:1rem;">
+          <a href="contact.html" class="btn btn--glow btn--xl">
+            <span class="btn__icon">🌿</span>無料レシピを受け取る
+          </a>
+        </div>
+        <p class="cta-form__note cta-form__note--light">登録無料・スパムはありません・いつでも解除できます</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="footer-logo-ja">台所の魔法</p>
+        <p class="footer-logo-en">Kitchen Witch</p>
+        <p class="footer-tagline">食は、体を整える魔法。<br>自然とともに生きる暮らしを。</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="フッターナビ">
+        <a href="index.html">トップ</a>
+        <a href="concept.html">コンセプト</a>
+        <a href="story.html">ストーリー</a>
+        <a href="service.html">サービス</a>
+        <a href="retreat.html">リトリート</a>
+        <a href="voice.html">お客様の声</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="site-footer__sns">
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+      <a href="https://note.com/" target="_blank" rel="noopener noreferrer" aria-label="note">note</a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+    </div>
+    <p class="site-footer__copy"><small>© 2025 台所の魔法 Kitchen Witch. All Rights Reserved.</small></p>
+  </div>
+</footer>
+<script src="js/effects.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

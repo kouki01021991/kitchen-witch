@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>サービス | 森の魔女の台所 — フードレメディ講座・レシピ配信・個別相談</title>
+  <meta name="description" content="フードレメディ入門講座・旬のレシピ定期配信・個別相談など、森の魔女の台所が提供するサービス一覧。受講料・内容・お申し込み方法をご確認ください。">
+  <meta property="og:title" content="サービス | 森の魔女の台所">
+  <meta property="og:description" content="フードレメディ入門講座・旬のレシピ配信・個別相談。あなたの台所に自然の知恵を届けます。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header header--page" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__logo">
+      <span class="logo-ja">台所の魔法</span>
+      <span class="logo-en">Kitchen Witch</span>
+    </a>
+    <nav class="site-header__nav" aria-label="メインナビゲーション">
+      <a href="index.html">トップ</a>
+      <a href="concept.html">コンセプト</a>
+      <a href="story.html">ストーリー</a>
+      <a href="service.html" aria-current="page">サービス</a>
+      <a href="retreat.html">リトリート</a>
+      <a href="voice.html">お客様の声</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+    <a href="contact.html" class="site-header__cta-btn">無料レシピを受け取る</a>
+    <button class="site-header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav>
+    <a href="index.html"   onclick="closeMobileMenu()">トップ</a>
+    <a href="concept.html" onclick="closeMobileMenu()">コンセプト</a>
+    <a href="story.html"   onclick="closeMobileMenu()">ストーリー</a>
+    <a href="service.html" aria-current="page" onclick="closeMobileMenu()">サービス</a>
+    <a href="retreat.html" onclick="closeMobileMenu()">リトリート</a>
+    <a href="voice.html"   onclick="closeMobileMenu()">お客様の声</a>
+    <a href="contact.html" onclick="closeMobileMenu()">お問い合わせ</a>
+  </nav>
+  <a href="contact.html" class="btn btn--glow" onclick="closeMobileMenu()">無料レシピを受け取る</a>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero" aria-labelledby="page-title">
+  <canvas class="page-hero__canvas" id="pageHeroCanvas" aria-hidden="true"></canvas>
+  <div class="page-hero__mist" aria-hidden="true"></div>
+  <div class="page-hero__inner">
+    <p class="page-hero__en">Services</p>
+    <h1 class="page-hero__title" id="page-title">サービス一覧</h1>
+    <div class="page-hero__deco" aria-hidden="true"></div>
+    <p class="page-hero__sub">
+      食と自然の知恵を通じて、<br>
+      体と暮らしを整えるプログラムをご用意しています。
+    </p>
+  </div>
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <ol class="breadcrumb__list">
+      <li><a href="index.html">トップ</a></li>
+      <li><span aria-current="page">サービス</span></li>
+    </ol>
+  </nav>
+</section>
+
+<!-- ============ SECTION: サービスカード3枚 ============ -->
+<section class="section section--cream section--top" aria-labelledby="service-list-title">
+  <div class="container">
+
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">What We Offer</p>
+      <h2 class="section-header__ja" id="service-list-title">提供サービス</h2>
+      <p class="section-header__text">
+        はじめての方には無料レシピ配信から。<br>
+        さらに深く学びたい方には講座・個別相談をご用意しています。
+      </p>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="service-grid">
+
+      <!-- 01: 無料レシピ配信 -->
+      <article class="service-card kw-reveal" style="--kw-i:0" aria-labelledby="svc1-title">
+        <div class="service-card__head">
+          <span class="service-card__icon">📬</span>
+          <p class="service-card__category">Free / Online</p>
+          <h3 class="service-card__title" id="svc1-title">無料7日間レシピ配信</h3>
+        </div>
+        <div class="service-card__body">
+          <p class="service-card__desc">
+            まずはここから。7日間・毎日1通、季節の食材を使ったフードレメディレシピをメールでお届けします。購読後は週1回の森の暮らしコラムも配信。
+          </p>
+          <ul class="service-detail-list">
+            <li>季節の野草・根菜・ハーブを使ったレシピ7日分</li>
+            <li>フードレメディの基本ガイド（PDF）付き</li>
+            <li>週1回の森の暮らしコラム</li>
+            <li>いつでも解除OK・スパムなし</li>
+          </ul>
+          <div class="service-card__price">
+            <span class="price-label">料金</span>
+            <span class="price-amount">無料</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02: フードレメディ入門講座 -->
+      <article class="service-card kw-reveal" style="--kw-i:1" aria-labelledby="svc2-title">
+        <div class="service-card__head">
+          <span class="service-card__icon">📖</span>
+          <p class="service-card__category">Online Course</p>
+          <h3 class="service-card__title" id="svc2-title">フードレメディ入門講座<br>（全6回）</h3>
+        </div>
+        <div class="service-card__body">
+          <p class="service-card__desc">
+            旬・発酵・薬草の基礎知識から実践まで、6回にわたってオンラインで学べる入門講座。毎回の動画＋テキスト＋実践レシピ付き。
+          </p>
+          <ul class="service-detail-list">
+            <li>第1回：フードレメディとは／旬の食材の選び方</li>
+            <li>第2回：発酵食品の基本（味噌・塩麹・甘酒）</li>
+            <li>第3回：薬草・ハーブの活かし方</li>
+            <li>第4回：春夏の食養生レシピ</li>
+            <li>第5回：秋冬の食養生レシピ</li>
+            <li>第6回：体質別・症状別の食事の整え方</li>
+          </ul>
+          <div class="service-card__price">
+            <span class="price-label">受講料</span>
+            <span class="price-amount">¥18,000</span>
+            <span class="price-unit">（税込）</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03: 個別相談 -->
+      <article class="service-card kw-reveal" style="--kw-i:2" aria-labelledby="svc3-title">
+        <div class="service-card__head">
+          <span class="service-card__icon">🌿</span>
+          <p class="service-card__category">1 on 1 / Online</p>
+          <h3 class="service-card__title" id="svc3-title">個別フードレメディ相談<br>（60分）</h3>
+        </div>
+        <div class="service-card__body">
+          <p class="service-card__desc">
+            体の悩み・食の課題・暮らしの乱れをヒアリングし、あなたの体質と季節に合わせたオーダーメイドのアドバイスをお伝えします。
+          </p>
+          <ul class="service-detail-list">
+            <li>Zoomによるオンライン相談（60分）</li>
+            <li>事前アンケート（体質・食歴・お悩み）</li>
+            <li>相談後の個別レシピ・食事アドバイス書（PDF）</li>
+            <li>フォローメール1通（1週間以内）</li>
+          </ul>
+          <div class="service-card__price">
+            <span class="price-label">相談料</span>
+            <span class="price-amount">¥12,000</span>
+            <span class="price-unit">（税込）</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="center-btn kw-reveal">
+      <a href="contact.html" class="btn btn--glow btn--lg">
+        <span class="btn__icon">🌿</span>まずは無料レシピを受け取る
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION: 受講の流れ ============ -->
+<section class="section section--beige" aria-labelledby="flow-title">
+  <div class="container">
+
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">How It Works</p>
+      <h2 class="section-header__ja" id="flow-title">受講の流れ</h2>
+      <p class="section-header__text">
+        はじめての方もご安心ください。<br>
+        シンプルな4ステップで始められます。
+      </p>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="service-flow">
+      <div class="flow-step kw-reveal" style="--kw-i:0">
+        <div class="flow-step__num">01</div>
+        <div class="flow-step__body">
+          <h4>無料レシピに登録</h4>
+          <p>メールアドレスだけで登録できます。7日間のレシピでフードレメディを体験。</p>
+        </div>
+      </div>
+      <div class="flow-step kw-reveal" style="--kw-i:1">
+        <div class="flow-step__num">02</div>
+        <div class="flow-step__body">
+          <h4>気になる講座を選ぶ</h4>
+          <p>体験後、入門講座や個別相談に進むかどうかはあなたのペースで決めてください。</p>
+        </div>
+      </div>
+      <div class="flow-step kw-reveal" style="--kw-i:2">
+        <div class="flow-step__num">03</div>
+        <div class="flow-step__body">
+          <h4>お申し込み・お支払い</h4>
+          <p>お問い合わせフォームから申し込み後、メールにてお支払い方法をご案内します。</p>
+        </div>
+      </div>
+      <div class="flow-step kw-reveal" style="--kw-i:3">
+        <div class="flow-step__num">04</div>
+        <div class="flow-step__body">
+          <h4>受講スタート</h4>
+          <p>入金確認後、マイページIDとテキストをお送りします。自分のペースで学べます。</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION: よくある質問 ============ -->
+<section class="section section--cream" aria-labelledby="faq-title">
+  <div class="container">
+
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">FAQ</p>
+      <h2 class="section-header__ja" id="faq-title">よくある質問</h2>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="remedy-grid kw-reveal">
+      <div class="remedy-card">
+        <span class="remedy-card__num">Q 01</span>
+        <h3 class="remedy-card__title">料理が苦手でも大丈夫ですか？</h3>
+        <p class="remedy-card__text">はい、大丈夫です。レシピはすべて「切って混ぜる」「煮るだけ」など工程がシンプル。特別な調理技術は必要ありません。大切なのは食材を選ぶ目と、季節を感じる心です。</p>
+      </div>
+      <div class="remedy-card">
+        <span class="remedy-card__num">Q 02</span>
+        <h3 class="remedy-card__title">どんな人が受講していますか？</h3>
+        <p class="remedy-card__text">30〜50代の女性が中心です。体の不調（冷え・疲れ・肌荒れ）を改善したい方、食生活を見直したい方、自然とつながった暮らしに興味がある方、島根・出雲の食文化に関心のある方など。</p>
+      </div>
+      <div class="remedy-card">
+        <span class="remedy-card__num">Q 03</span>
+        <h3 class="remedy-card__title">オンラインでも学べますか？</h3>
+        <p class="remedy-card__text">はい。入門講座はすべて動画＋テキストで、全国どこからでも受講できます。個別相談はZoomを使ったオンライン形式です。リトリートのみ島根への来訪が必要です。</p>
+      </div>
+      <div class="remedy-card">
+        <span class="remedy-card__num">Q 04</span>
+        <h3 class="remedy-card__title">受講期限はありますか？</h3>
+        <p class="remedy-card__text">入門講座は受講開始から6ヶ月間、動画・テキストにアクセスできます。自分のペースで進めていただいて構いません。</p>
+      </div>
+      <div class="remedy-card">
+        <span class="remedy-card__num">Q 05</span>
+        <h3 class="remedy-card__title">支払い方法は？</h3>
+        <p class="remedy-card__text">銀行振込またはクレジットカード（Stripe経由）でのお支払いに対応しています。詳細はお申し込み後のメールにてご案内します。</p>
+      </div>
+      <div class="remedy-card">
+        <span class="remedy-card__num">Q 06</span>
+        <h3 class="remedy-card__title">解約・返金はできますか？</h3>
+        <p class="remedy-card__text">デジタルコンテンツの性質上、原則として返金対応は行っておりません。無料レシピ配信で内容をご確認のうえ、ご検討いただくことをおすすめします。</p>
+      </div>
+    </div>
+
+    <div class="center-btn kw-reveal">
+      <a href="contact.html" class="btn btn--forest">その他のご質問はこちら →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="section cta-final" aria-labelledby="cta-service-title">
+  <div class="cta-final__bg" aria-hidden="true"></div>
+  <div class="cta-final__mist" aria-hidden="true"></div>
+  <canvas class="section-canvas" id="finalCanvas" aria-hidden="true"></canvas>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="cta-final__inner">
+      <div class="cta-final__sigil" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="96" stroke="rgba(160,210,90,.20)" stroke-width="1"/>
+          <circle cx="100" cy="100" r="72" stroke="rgba(160,210,90,.12)" stroke-width=".6"/>
+          <polygon points="100,10 182,145 18,145" stroke="rgba(160,210,90,.16)" stroke-width=".8" fill="none"/>
+          <polygon points="100,190 18,55 182,55" stroke="rgba(160,210,90,.16)" stroke-width=".8" fill="none"/>
+          <circle cx="100" cy="100" r="5" fill="rgba(180,240,100,.35)"/>
+        </svg>
+      </div>
+      <div class="kw-reveal">
+        <p class="cta-final__eyebrow">まずは無料から始めましょう</p>
+        <h2 class="cta-final__title" id="cta-service-title">
+          7日間の無料レシピで<br><em>フードレメディを体験する</em>
+        </h2>
+        <p class="cta-final__body">
+          登録はメールアドレスだけ。特別な準備は何もいりません。<br>
+          毎日の台所から、体を整える魔法を始めましょう。
+        </p>
+        <div style="margin-bottom:1rem;">
+          <a href="contact.html" class="btn btn--glow btn--xl">
+            <span class="btn__icon">🌿</span>無料レシピを受け取る
+          </a>
+        </div>
+        <p class="cta-form__note cta-form__note--light">登録無料・スパムはありません・いつでも解除できます</p>
+        <div class="cta-final__trust">
+          <span><span aria-hidden="true">✦</span> 登録者 1,200名以上</span>
+          <span><span aria-hidden="true">✦</span> 返金不要（無料）</span>
+          <span><span aria-hidden="true">✦</span> いつでも解除OK</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="footer-logo-ja">台所の魔法</p>
+        <p class="footer-logo-en">Kitchen Witch</p>
+        <p class="footer-tagline">食は、体を整える魔法。<br>自然とともに生きる暮らしを。</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="フッターナビ">
+        <a href="index.html">トップ</a>
+        <a href="concept.html">コンセプト</a>
+        <a href="story.html">ストーリー</a>
+        <a href="service.html">サービス</a>
+        <a href="retreat.html">リトリート</a>
+        <a href="voice.html">お客様の声</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="site-footer__sns">
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+      <a href="https://note.com/" target="_blank" rel="noopener noreferrer" aria-label="note">note</a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+    </div>
+    <p class="site-footer__copy"><small>© 2025 台所の魔法 Kitchen Witch. All Rights Reserved.</small></p>
+  </div>
+</footer>
+
+<script src="js/effects.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ・無料レシピ登録 | 森の魔女の台所</title>
+  <meta name="description" content="無料7日間レシピへの登録・講座お申し込み・リトリート参加問い合わせはこちら。森の魔女の台所へのご質問もお気軽にどうぞ。">
+  <meta property="og:title" content="お問い合わせ | 森の魔女の台所">
+  <meta property="og:description" content="無料レシピ登録・講座申し込み・リトリート参加問い合わせ。まずはメールアドレスを登録してください。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header header--page" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__logo">
+      <span class="logo-ja">台所の魔法</span>
+      <span class="logo-en">Kitchen Witch</span>
+    </a>
+    <nav class="site-header__nav" aria-label="メインナビゲーション">
+      <a href="index.html">トップ</a>
+      <a href="concept.html">コンセプト</a>
+      <a href="story.html">ストーリー</a>
+      <a href="service.html">サービス</a>
+      <a href="retreat.html">リトリート</a>
+      <a href="voice.html">お客様の声</a>
+      <a href="contact.html" aria-current="page">お問い合わせ</a>
+    </nav>
+    <a href="contact.html" class="site-header__cta-btn" aria-current="page">無料レシピを受け取る</a>
+    <button class="site-header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav>
+    <a href="index.html"   onclick="closeMobileMenu()">トップ</a>
+    <a href="concept.html" onclick="closeMobileMenu()">コンセプト</a>
+    <a href="story.html"   onclick="closeMobileMenu()">ストーリー</a>
+    <a href="service.html" onclick="closeMobileMenu()">サービス</a>
+    <a href="retreat.html" onclick="closeMobileMenu()">リトリート</a>
+    <a href="voice.html"   onclick="closeMobileMenu()">お客様の声</a>
+    <a href="contact.html" aria-current="page" onclick="closeMobileMenu()">お問い合わせ</a>
+  </nav>
+  <a href="contact.html" class="btn btn--glow" onclick="closeMobileMenu()">無料レシピを受け取る</a>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero" aria-labelledby="page-title">
+  <canvas class="page-hero__canvas" id="pageHeroCanvas" aria-hidden="true"></canvas>
+  <div class="page-hero__mist" aria-hidden="true"></div>
+  <div class="page-hero__inner">
+    <p class="page-hero__en">Contact</p>
+    <h1 class="page-hero__title" id="page-title">お問い合わせ・<br>無料レシピ登録</h1>
+    <div class="page-hero__deco" aria-hidden="true"></div>
+    <p class="page-hero__sub">
+      無料レシピ登録・講座申し込み・<br>
+      リトリート参加のご相談はこちらから
+    </p>
+  </div>
+  <nav class="breadcrumb" aria-label="パンくずリスト">
+    <ol class="breadcrumb__list">
+      <li><a href="index.html">トップ</a></li>
+      <li><span aria-current="page">お問い合わせ</span></li>
+    </ol>
+  </nav>
+</section>
+
+<!-- ============ SECTION: 無料レシピ登録カード ============ -->
+<section class="section section--cream section--top" aria-labelledby="register-title">
+  <div class="container">
+
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Free Recipe</p>
+      <h2 class="section-header__ja" id="register-title">まずは無料レシピから</h2>
+      <p class="section-header__text">
+        登録はメールアドレスだけ。7日間のレシピで<br>
+        フードレメディを体験してください。
+      </p>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="register-card kw-reveal">
+      <canvas id="registerCanvas" aria-hidden="true"></canvas>
+      <div class="register-card__inner">
+        <h3 class="register-card__title">
+          自然の食を暮らしに取り入れる<br>
+          <em>無料7日レシピ</em>
+        </h3>
+        <p class="register-card__body">
+          季節の野草・根菜・ハーブを使った体を整えるレシピ7日分<br>
+          フードレメディの基本ガイド（PDF）付き<br>
+          登録後は週1回の森の暮らしコラムも配信
+        </p>
+        <!-- ★ここをMailchimp/Formspreeのフォームに差し替えてください -->
+        <div class="cta-form" id="free-recipe-form">
+          <input
+            type="email"
+            class="cta-form__input"
+            placeholder="メールアドレスを入力"
+            aria-label="メールアドレス"
+          >
+          <button type="button" class="btn btn--glow btn--lg">
+            <span class="btn__icon">🌿</span>無料で受け取る
+          </button>
+        </div>
+        <p class="cta-form__note">登録無料・スパムはありません・いつでも解除できます</p>
+        <div class="cta-final__trust" style="margin-top:1.2rem;">
+          <span><span aria-hidden="true">✦</span> 登録者 1,200名以上</span>
+          <span><span aria-hidden="true">✦</span> 返金不要（無料）</span>
+          <span><span aria-hidden="true">✦</span> いつでも解除OK</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION: お問い合わせフォーム ============ -->
+<section class="section section--beige" aria-labelledby="contact-form-title">
+  <div class="container">
+
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Contact Form</p>
+      <h2 class="section-header__ja" id="contact-form-title">お問い合わせフォーム</h2>
+      <p class="section-header__text">
+        講座申し込み・リトリート参加のご相談・その他のご質問は<br>
+        下記フォームからお気軽にどうぞ。通常2〜3営業日以内にご返信します。
+      </p>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- 左: 案内 -->
+      <div class="contact-info kw-reveal">
+        <h3 class="contact-info__title">ご連絡について</h3>
+        <p>お問い合わせいただいた内容は、通常2〜3営業日以内にメールにてご返信いたします。返信が届かない場合は、迷惑メールフォルダをご確認ください。</p>
+        <p>講座・リトリートのお申し込みも、このフォームから受け付けています。「お問い合わせ内容」欄にご希望のサービス名をご記入ください。</p>
+        <div class="contact-points">
+          <div class="contact-point">
+            <div class="contact-point__icon">📬</div>
+            <span>無料レシピ登録・メルマガ</span>
+          </div>
+          <div class="contact-point">
+            <div class="contact-point__icon">📖</div>
+            <span>フードレメディ入門講座（オンライン）</span>
+          </div>
+          <div class="contact-point">
+            <div class="contact-point__icon">🌿</div>
+            <span>個別フードレメディ相談（Zoom）</span>
+          </div>
+          <div class="contact-point">
+            <div class="contact-point__icon">🏕️</div>
+            <span>森のリトリート（島根・2泊3日）</span>
+          </div>
+          <div class="contact-point">
+            <div class="contact-point__icon">💬</div>
+            <span>その他ご質問・ご相談</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右: フォームカード -->
+      <!-- ★このフォームのaction属性をFormspree等のURLに差し替えてください -->
+      <div class="contact-form-card kw-reveal">
+        <div class="form-group">
+          <label class="form-label" for="name">
+            お名前<span>必須</span>
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="form-input"
+            placeholder="山田 花子"
+            autocomplete="name"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">
+            メールアドレス<span>必須</span>
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-input"
+            placeholder="example@email.com"
+            autocomplete="email"
+            required
+          >
+          <p class="form-note">ご返信先のメールアドレスをご入力ください。</p>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="subject">
+            お問い合わせ内容<span>必須</span>
+          </label>
+          <select id="subject" name="subject" class="form-select" required>
+            <option value="" disabled selected>選択してください</option>
+            <option value="recipe">無料レシピ登録について</option>
+            <option value="course">フードレメディ入門講座について</option>
+            <option value="consult">個別フードレメディ相談について</option>
+            <option value="retreat">森のリトリートについて</option>
+            <option value="other">その他のご質問・ご相談</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="message">
+            メッセージ<span>必須</span>
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            class="form-textarea"
+            placeholder="ご質問やご相談の内容をご記入ください。リトリートご参加の場合は、ご希望の時期・お体の状態などもお知らせいただけると幸いです。"
+            required
+          ></textarea>
+        </div>
+
+        <label class="form-privacy">
+          <input type="checkbox" name="privacy" required>
+          <span><a href="#" style="color:var(--leaf-bright);">プライバシーポリシー</a>に同意します</span>
+        </label>
+
+        <button type="button" class="btn btn--glow btn--full btn--lg" onclick="handleFormSubmit()">
+          <span class="btn__icon">🌿</span>送信する
+        </button>
+
+        <p class="form-note" style="text-align:center;margin-top:1rem;">送信後、自動返信メールが届きます。<br>届かない場合は迷惑メールフォルダをご確認ください。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION: SNSでもつながれます ============ -->
+<section class="section section--cream" aria-labelledby="sns-title">
+  <div class="container">
+    <div class="section-header kw-reveal">
+      <p class="section-header__en">Follow Us</p>
+      <h2 class="section-header__ja" id="sns-title">SNSでもつながれます</h2>
+      <p class="section-header__text">
+        日々の台所の様子、旬の食材情報、森の暮らしを発信しています。<br>
+        フォローしてお気軽にコメントをどうぞ。
+      </p>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+    <div class="about-cards">
+      <div class="value-card kw-reveal" style="--kw-i:0">
+        <div class="value-card__icon">📸</div>
+        <h3 class="value-card__title">Instagram</h3>
+        <p class="value-card__text">旬の食材・レシピ写真・森の暮らしの日常を毎日発信。レシピのリール動画も公開中。</p>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="btn btn--forest" style="margin-top:1.2rem;font-size:.8rem;">フォローする →</a>
+      </div>
+      <div class="value-card kw-reveal" style="--kw-i:1">
+        <div class="value-card__icon">📝</div>
+        <h3 class="value-card__title">note</h3>
+        <p class="value-card__text">フードレメディの深い話、食と暮らしのエッセイ、島根の四季を綴った記事を不定期で更新。</p>
+        <a href="https://note.com/" target="_blank" rel="noopener noreferrer" class="btn btn--forest" style="margin-top:1.2rem;font-size:.8rem;">読みに行く →</a>
+      </div>
+      <div class="value-card kw-reveal" style="--kw-i:2">
+        <div class="value-card__icon">🎥</div>
+        <h3 class="value-card__title">YouTube</h3>
+        <p class="value-card__text">発酵食品の仕込み動画・野草摘みの様子・季節のレシピを動画でわかりやすく解説。</p>
+        <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="btn btn--forest" style="margin-top:1.2rem;font-size:.8rem;">チャンネルを見る →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="footer-logo-ja">台所の魔法</p>
+        <p class="footer-logo-en">Kitchen Witch</p>
+        <p class="footer-tagline">食は、体を整える魔法。<br>自然とともに生きる暮らしを。</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="フッターナビ">
+        <a href="index.html">トップ</a>
+        <a href="concept.html">コンセプト</a>
+        <a href="story.html">ストーリー</a>
+        <a href="service.html">サービス</a>
+        <a href="retreat.html">リトリート</a>
+        <a href="voice.html">お客様の声</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
+    <div class="site-footer__sns">
+      <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+      <a href="https://note.com/" target="_blank" rel="noopener noreferrer" aria-label="note">note</a>
+      <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+    </div>
+    <p class="site-footer__copy"><small>© 2025 台所の魔法 Kitchen Witch. All Rights Reserved.</small></p>
+  </div>
+</footer>
+
+<script src="js/effects.js"></script>
+<script>
+/* フォーム送信ハンドラ（Formspree等に差し替えてください） */
+function handleFormSubmit() {
+  var name    = document.getElementById('name').value.trim();
+  var email   = document.getElementById('email').value.trim();
+  var subject = document.getElementById('subject').value;
+  var message = document.getElementById('message').value.trim();
+  var privacy = document.querySelector('input[name="privacy"]').checked;
+
+  if (!name || !email || !subject || !message) {
+    alert('必須項目をすべてご入力ください。');
+    return;
+  }
+  if (!privacy) {
+    alert('プライバシーポリシーへの同意をお願いします。');
+    return;
+  }
+  /* ★ここにFormspree等のsubmit処理を追加してください */
+  alert('送信ありがとうございます。2〜3営業日以内にご返信いたします。');
+}
+</script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -3558,7 +3558,7 @@ curl -X POST https://api.anthropic.com/v1/claude_code/routines/$ROUTINE_ID/fire 
 
 #### 5.6.7 `/schedule` が使えないケース
 
-- Console API キー / profile 認証で feature flag が on: `/schedule is available with Claude for Enterprise、ask your admin about migrating from API-key access`
+- Console API キー / profile 認証で feature flag が on: `/schedule is available with Claude for Enterprise — ask your admin about migrating from API-key access`
 - サインアウト状態: `/schedule requires a claude.ai subscription. Run /login...`(v2.1.268+)
 - cloud セッション内: その環境では利用不可と表示
 - org policy で cloud セッション無効: `Cloud sessions are disabled by your organization's policy`(v2.1.268+)

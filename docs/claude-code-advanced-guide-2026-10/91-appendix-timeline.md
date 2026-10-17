@@ -6,7 +6,7 @@
 | - | - |
 | Week 13 (3/23-27, v2.1.83-85) | auto mode が research preview で登場(分類器が権限プロンプトを肩代わり)。デスクトップで computer use。条件付き `if` hooks。Windows 向けネイティブ PowerShell ツール |
 | Week 14 (3/30-4/3, v2.1.86-91) | CLI からの computer use(research preview)。`/powerup` 対話レッスン。MCP 結果サイズのツール別上書き(最大 500K)。プラグインの実行ファイルが Bash の PATH に載る |
-| Week 15 (4/6-10, v2.1.92-101) | Ultraplan 早期プレビュー(クラウドで計画→Web で編集→ローカルかリモートで実行)。Monitor ツール(バックグラウンドイベントを会話にストリーム)。`/loop` の自動ペース。`/team-onboarding`。`/autofix-pr` |
+| Week 15 (4/6-10, v2.1.92-101) | Ultraplan 早期プレビュー(クラウドで計画→Web で編集→ローカルかリモートで実行。その後 `/ultraplan` コマンドは削除され、現在の commands 一覧にはありません。第15章 15.20 参照)。Monitor ツール(バックグラウンドイベントを会話にストリーム)。`/loop` の自動ペース。`/team-onboarding`。`/autofix-pr` |
 | Week 16 (4/13-17, v2.1.105-113) | Claude Opus 4.7 が Max と Team Premium の既定に。`xhigh` effort と `/effort` スライダー。Routines(Web 上で予定、GitHub イベント、API から雲上エージェントを起動)。モバイル push 通知。CLI がネイティブバイナリに |
 | Week 17 (4/20-24, v2.1.114-119) | `/ultrareview` 公開 research preview(クラウドでバグ探索エージェント群)。セッション recap。カスタムテーマ |
 | Week 18 (4/27-5/1, v2.1.120-126) | Git Bash 不要の Windows。`claude ultrareview` で CI からレビュー。`claude project purge`。`/resume` に PR URL |
